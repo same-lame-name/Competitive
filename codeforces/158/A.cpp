@@ -3,18 +3,18 @@ using namespace std;
 
 int main(){
     int N, k; cin >> N >> k;
-    int curRank = 0, totalTimes = 0, kthEle = -1;
-    while(curRank < k){
+    vector<int> nums;
+    for(int itr = 0; itr < N; ++itr){
         int curNum; cin >> curNum;
-        if(curNum <= 0) break;
-        curRank++;
-        if(curRank == k) kthEle = curNum;
-      	while(totalTimes < N && curRank == k && curNum == kthEle){
-           totalTimes++;
-           cin >> curNum;  
-        }
-        if(curRank < k) totalTimes++;
+        if(curNum > 0) nums.push_back(curNum);
+        else break;
     }
-    cout << totalTimes << endl;
+    int M = nums.size();
+    if(k > M) cout << M << endl;
+    else{
+        int threshScore = nums[k - 1];
+    	auto itr = upper_bound(nums.begin(), nums.end(), threshScore, greater<int>());
+    	cout << distance(nums.begin(), itr);
+    }
     return 0;
 }
