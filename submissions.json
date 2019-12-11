@@ -1,4 +1,20 @@
 {
+  "CF66621232": {
+    "contest_id": 598,
+    "language": "GNU C++14",
+    "path": "codeforces\\598\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Tricky Sum",
+    "problem_url": "https://codeforces.com/contest/598/problem/A",
+    "submission_id": "CF66621232",
+    "submission_url": "https://codeforces.com/contest/598/submission/66621232",
+    "tags": [
+      "math",
+      "*900"
+    ],
+    "timestamp": "Dec/11/2019 12:32"
+  },
   "CF66622175": {
     "contest_id": 598,
     "language": "GNU C++14",
