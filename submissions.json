@@ -1,4 +1,21 @@
 {
+  "CF66622175": {
+    "contest_id": 598,
+    "language": "GNU C++14",
+    "path": "codeforces\\598\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Queries on a String",
+    "problem_url": "https://codeforces.com/contest/598/problem/B",
+    "submission_id": "CF66622175",
+    "submission_url": "https://codeforces.com/contest/598/submission/66622175",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Dec/11/2019 12:57"
+  },
   "CF66633681": {
     "contest_id": 598,
     "language": "GNU C++14",
