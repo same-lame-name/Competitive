@@ -1,4 +1,20 @@
 {
+  "CF67159628": {
+    "contest_id": 106,
+    "language": "GNU C++14",
+    "path": "codeforces\\106\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Buns",
+    "problem_url": "https://codeforces.com/contest/106/problem/C",
+    "submission_id": "CF67159628",
+    "submission_url": "https://codeforces.com/contest/106/submission/67159628",
+    "tags": [
+      "dp",
+      "*1700"
+    ],
+    "timestamp": "Dec/18/2019 19:03"
+  },
   "CF67291705": {
     "contest_id": 676,
     "language": "GNU C++14",
