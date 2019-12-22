@@ -1,47 +1,29 @@
-#include "bits/stdc++.h"
-#define PRECISION(x) cout << fixed << setprecision(x)
-#define FAST_IO ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-#define SZ(X) ((int)(X).size())
-#define ALL(X) (X).begin(), (X).end()
-#define ALLR(X) (X).rbegin(), (X).rend()
-#define MP make_pair
-#define PB push_back
-#define EB emplace_back
-#define F first
-#define S second
-
+#include <bits/stdc++.h>
 using namespace std;
-
-template<class T> void max_self(T & a, const T & b) { if(a < b) a = b; }
-template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
-typedef long long LL;
-const int INF = 1e9 + 7;
-const double PI = acos(-1.0);
-const double EPS = (1e-9);
-
-int N, opt[(int)1e5 + 5][3], val[(int)1e5 + 5][3];
+#define ll long long
 
 int main(){
-  FAST_IO  
-  cin >> N;
-  for(int rep = 0; rep < N; ++rep){
-    for(int itr = 0; itr < 3; ++itr){
-      cin >> val[rep][itr];
-      opt[rep][itr] = 0;
-    }
-  }
-
-  opt[0][0] = val[0][0], opt[0][1] = val[0][1], opt[0][2] = val[0][2];
-
-  for(int day = 0; day < N - 1; ++day){
-    for(int c = 0; c < 3; ++c){
-      for(int rep = 1; rep < 3; ++rep){
-        max_self(opt[day + 1][(c + rep) % 3],
-                 opt[day][c] + val[day + 1][(c + rep) % 3]);
-      }
-    }
-  }
-
-  cout << max({opt[N - 1][0], opt[N - 1][1], opt[N - 1][2]});
-  return 0;
+	const ll INF = 1e9 + 5;
+	ll N; cin >> N;
+        vector<vector<ll>> choices(N, vector<ll>(3));
+        for(ll rep = 0; rep < N; ++rep){
+            cin >> choices[rep][0];
+            cin >> choices[rep][1];
+            cin >> choices[rep][2];
+        }
+        vector<vector<ll>> maxGain(N, vector<ll>(3, -INF));
+        maxGain[0][0] = choices[0][0];
+        maxGain[0][1] = choices[0][1];
+        maxGain[0][2] = choices[0][2];
+        for(ll day = 1; day < N; ++day){
+            for(ll choice = 0; choice < 3; ++choice){
+                for(ll pChoice = 0; pChoice < 3; ++pChoice){
+                    if(choice == pChoice) continue;
+                    maxGain[day][choice] = max(maxGain[day][choice],
+                    		      maxGain[day - 1][pChoice] + choices[day][choice]);
+                }
+            }
+        }
+        cout << max({maxGain[N - 1][0], maxGain[N - 1][1], maxGain[N - 1][2]}) << endl;
+    	return 0;
 }
