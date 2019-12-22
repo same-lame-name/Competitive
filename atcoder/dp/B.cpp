@@ -1,39 +1,23 @@
-#include "bits/stdc++.h"
-#define PRECISION(x) cout << fixed << setprecision(x)
-#define FAST_IO ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-#define SZ(X) ((int)(X).size())
-#define ALL(X) (X).begin(), (X).end()
-#define ALLR(X) (X).rbegin(), (X).rend()
-#define MP make_pair
-#define PB push_back
-#define EB emplace_back
-#define F first
-#define S second
-
+#include <bits/stdc++.h>
 using namespace std;
-
-template<class T> void max_self(T & a, const T & b) { if(a < b) a = b; }
-template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
-typedef long long LL;
-const int INF = 1e9 + 7;
-const double PI = acos(-1.0);
-const double EPS = (1e-9);
-
-int N, k, height[(int)1e5 + 105], opt[(int)1e5 + 105];
+#define ll long long
 
 int main(){
-  FAST_IO  
-  cin >> N >> k;
-  for(int rep = 0; rep < N; ++rep) cin >> height[rep];
-  for(int rep = 0; rep < N; ++rep) opt[rep] = INF;
-
-  opt[0] = 0;
-  for(int idx = 0; idx < N - 1; ++idx){
-    for(int s = 1; s <= k; ++s){
-      min_self(opt[idx + s], opt[idx] + abs(height[idx + s] - height[idx]));
-    }
-  }
-
-  cout << opt[N - 1] << '\n';
-  return 0;
+	const ll INF = 1e9 + 5;
+	ll N, k; cin >> N >> k;
+        vector<ll> heights(N), minCost(N, INF);
+        minCost[0] = 0;
+        for(ll &ele : heights) cin >> ele;
+        minCost[0] = 0;
+        for(ll place = 0; place < N; ++place){
+            for(int jump = 1; jump <= k; ++jump){
+                if(place + jump < N){
+                   minCost[place + jump] = min(minCost[place + jump],
+                    			  minCost[place] 
+                                          + abs(heights[place] - heights[place + jump]));
+                }
+            }
+        }
+        cout << minCost[N - 1] << endl;
+    	return 0;
 }
