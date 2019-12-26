@@ -1,7 +1,7 @@
 
 #include <bits/stdc++.h>
 #define PRECISION(x) cout << fixed << setprecision(x); 
-#define FAST_IO ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define FAST_IO ios::sync_with_stdio(0); cin.tie(0); 
 #define SZ(X) ((int)(X).size())
 #define ALL(X) (X).begin(), (X).end()
 #define REP(i,n) for (int i = 0; i < n; ++i)
