@@ -1,4 +1,21 @@
 {
+  "CF67639482": {
+    "contest_id": 805,
+    "language": "GNU C++14",
+    "path": "codeforces\\805\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Fake NP",
+    "problem_url": "https://codeforces.com/contest/805/problem/A",
+    "submission_id": "CF67639482",
+    "submission_url": "https://codeforces.com/contest/805/submission/67639482",
+    "tags": [
+      "greedy",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Dec/26/2019 13:35"
+  },
   "CF67647907": {
     "contest_id": 264,
     "language": "GNU C++14",
