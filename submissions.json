@@ -1,4 +1,22 @@
 {
+  "CF67686989": {
+    "contest_id": 603,
+    "language": "GNU C++14",
+    "path": "codeforces\\603\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Alternative Thinking",
+    "problem_url": "https://codeforces.com/contest/603/problem/A",
+    "submission_id": "CF67686989",
+    "submission_url": "https://codeforces.com/contest/603/submission/67686989",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Dec/27/2019 14:50"
+  },
   "CF67687944": {
     "contest_id": 603,
     "language": "GNU C++14",

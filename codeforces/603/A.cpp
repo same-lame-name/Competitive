@@ -33,13 +33,16 @@ int main(){
 	FAST_IO 
 	DRI(len);
 	string input; cin >> input;
-	vector<vector<int>> maxAlt(3, vector<int>(2, 0));
-	for(int idx = 0; idx < len; ++idx){
-		int curEle = (input[idx] == '1');
-		maxAlt[2][curEle] = max({maxAlt[2][curEle], maxAlt[2][!curEle] + 1, maxAlt[1][!curEle] + 1});
-		maxAlt[1][!curEle] = max({maxAlt[1][!curEle], maxAlt[1][curEle] + 1, maxAlt[0][curEle] + 1});
-		maxAlt[0][curEle] = max({maxAlt[0][curEle], maxAlt[0][!curEle] + 1});
+	int endZero = 0, endOne = 0;
+	for(char c : input){
+		if(c == '1'){
+			max_self(endOne, endZero + 1);
+		}
+		else{
+			max_self(endZero, endOne + 1);
+		}
 	}
-	cout << max(maxAlt[2][0], maxAlt[2][1]) << endl;
+	int maxLen = max(endZero, endOne);
+	cout << min(len, maxLen + 2) << endl;
 	return 0;
 }
