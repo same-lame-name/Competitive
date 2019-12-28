@@ -25,13 +25,17 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 
 int main(){
 	FAST_IO 
-	DRII(N, genC);
-	vector<int> encG(genC + 1, 0);
-	long long pairC = 0;
+	DRII(N, M);
+	vector<int> genreM(M + 1, 0);
+	long long ways = 0;
 	REP(rep, N){
-		int genre; cin >> genre;
-		pairC += (long long)(rep - encG[genre]++);	
+		DRI(gen); genreM[gen]++;
 	}
-	cout << pairC << endl;
+	for(int gType = 1; gType <= M; ++gType){
+		for(int pType = 1; pType < gType; ++pType){
+			ways += (long long) genreM[gType] * genreM[pType];
+		}
+	}
+	cout << ways << endl;
 	return 0;
 }
