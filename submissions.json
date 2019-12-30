@@ -2303,6 +2303,22 @@
     ],
     "timestamp": "Jan/16/2021 13:26"
   },
+  "AC9240899": {
+    "contest_id": "abc149",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc149\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Greedy Takahashi",
+    "problem_url": "https://atcoder.jp/contests/abc149/tasks/abc149_b",
+    "submission_id": "AC9240899",
+    "submission_url": "https://atcoder.jp/contests/abc149/submissions/9240899",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Dec/30/2019 14:41"
+  },
   "AC9241239": {
     "contest_id": "abc149",
     "language": "C++14 (GCC 5.4.1)",
