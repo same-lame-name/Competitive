@@ -27,13 +27,10 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
 	string name; cin >> name;
-	vector<bool> charU(26, false);
+	vector<int> charU(26, 0);
 	int distinctC = 0;
 	for(char c : name){
-		if(!charU[c - 'a']){
-			distinctC++;
-			charU[c - 'a'] = true;
-		}
+		if(charU[c - 'a']++ == 0) distinctC++;
 	}
 	if(distinctC % 2) cout << "IGNORE HIM!" << "\n";
 	else cout << "CHAT WITH HER!" << "\n";

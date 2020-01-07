@@ -1,4 +1,22 @@
 {
+  "CF68369037": {
+    "contest_id": 236,
+    "language": "GNU C++14",
+    "path": "codeforces\\236\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Boy or Girl",
+    "problem_url": "https://codeforces.com/contest/236/problem/A",
+    "submission_id": "CF68369037",
+    "submission_url": "https://codeforces.com/contest/236/submission/68369037",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Jan/07/2020 22:32"
+  },
   "CF68369145": {
     "contest_id": 236,
     "language": "GNU C++14",
