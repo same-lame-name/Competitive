@@ -27,13 +27,10 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
 	DRI(N);
-	vector<int> heights(101, 0);
-	REP(rep, N){DRI(h); heights[h]++;}
-	for(int h = 1; h <= 100; ++h){
-		for(int rep = 0; rep < heights[h]; ++rep){
-			cout << h << " ";
-		}
-	}
+	vector<int> height(N);
+	read(height);
+	sort(ALL(height));
+	for(int ele : height) cout << ele << " ";
 	cout << "\n";
 	return 0;
 }
