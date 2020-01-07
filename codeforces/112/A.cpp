@@ -31,9 +31,14 @@ int main(){
 	for(int idx = 0; idx < N; ++idx){
 		if(one[idx] < 'a') one[idx] += 32;
 		if(two[idx] < 'a') two[idx] += 32;
+		if(one[idx] < two[idx]){
+			cout << -1 << "\n";
+			return 0;
+		}else if(two[idx] < one[idx]){
+			cout << 1 << "\n";
+			return 0;
+		}
 	}
-	if(one < two) cout << -1 << "\n";
-	else if(one  == two) cout << 0 << "\n";
-	else cout << 1 << "\n";
+	cout << 0 << "\n";
 	return 0;
 }
