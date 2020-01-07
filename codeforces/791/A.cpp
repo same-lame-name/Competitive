@@ -26,13 +26,10 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 
 int main(){
 	FAST_IO 
-	DRII(l, b);
-	int yearC = 0;
-	while(l <= b){
-		yearC++;
-		l *= 3;
-		b *= 2;
-	}
-	cout << yearC << "\n";
+	double l, b; cin >> l >> b;
+	double N = (log(b) - log(l)) / (1.0 * (log(3) - log(2)));
+	cerr << N << "     " << round(N) << endl;
+	if((float)round(N) - N > 1e-5) cout << round(N) << "\n";
+	else cout << round(N) + 1 << "\n";
 	return 0;
 }
