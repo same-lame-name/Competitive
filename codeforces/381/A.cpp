@@ -34,9 +34,11 @@ int main(){
 	while(leftIdx <= rightIdx){
 		int curMax = -1;
 		if(nums[leftIdx] < nums[rightIdx]){
-			curMax = nums[rightIdx--];
+			curMax = nums[rightIdx];
+			rightIdx--;
 		}else{
-			curMax = nums[leftIdx++];
+			curMax = nums[leftIdx];
+			leftIdx++;
 		}
 		if(sTurn) sScore += curMax;
 		else dScore += curMax;
