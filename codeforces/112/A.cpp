@@ -29,8 +29,8 @@ int main(){
 	string one, two; cin >> one >> two;
 	int N = SZ(one);
 	for(int idx = 0; idx < N; ++idx){
-		if(one[idx] < 'a') one[idx] += 32;
-		if(two[idx] < 'a') two[idx] += 32;
+		if((int)one[idx] < 97) one[idx] += 32;
+		if((int)two[idx] < 97) two[idx] += 32;
 		if(one[idx] < two[idx]){
 			cout << -1 << "\n";
 			return 0;
