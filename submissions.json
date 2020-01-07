@@ -1,4 +1,21 @@
 {
+  "CF68372710": {
+    "contest_id": 59,
+    "language": "GNU C++14",
+    "path": "codeforces\\59\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Word",
+    "problem_url": "https://codeforces.com/contest/59/problem/A",
+    "submission_id": "CF68372710",
+    "submission_url": "https://codeforces.com/contest/59/submission/68372710",
+    "tags": [
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Jan/07/2020 23:49"
+  },
   "CF68373309": {
     "contest_id": 344,
     "language": "GNU C++14",
