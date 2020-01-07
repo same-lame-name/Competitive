@@ -28,11 +28,11 @@ int main(){
 	FAST_IO 
 	DRI(N);
 	int delCount = 0;
-	char lastC = '#', curChar;
+	char lastC = '#';
 	REP(rep, N){
-		cin >> curChar;
-		if(curChar == lastC) delCount++;
-		lastC = curChar;
+		char c; cin >> c;
+		if(c == lastC) delCount++;
+		lastC = c;
 	}
 	cout << delCount << "\n";
 	return 0;
