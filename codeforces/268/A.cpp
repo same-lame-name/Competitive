@@ -27,14 +27,15 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
 	DRI(N);
-	unordered_map<int, int> home, away;
-	int clashC = 0;
+	vector<int> home(N), away(N);
 	REP(rep, N){
-		DRII(h, a);
-		clashC += away[h];
-		clashC += home[a];
-		home[h]++;
-		away[a]++;
+		cin >> home[rep] >> away[rep];
+	}
+	int clashC = 0;
+	for(int h : home){
+		for(int a : away){
+			clashC += (a == h);
+		}
 	}
 	cout << clashC << "\n";
 	return 0;
