@@ -27,7 +27,7 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
 	DRI(N);
-	vector<int> birdC(N + 2);
+	vector<int> birdC(N + 2, 0);
 	for(int wireN = 1; wireN <= N; ++wireN) cin >> birdC[wireN];
 	DRI(M);
 	REP(rep, M){
