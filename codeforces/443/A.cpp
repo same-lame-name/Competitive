@@ -28,10 +28,10 @@ int main(){
 	FAST_IO 
 	string input;
 	getline(cin, input);
-	int dCount = 0;
-	for(char c = 'a'; c <= 'z'; ++c){
-		if(input.find(c) != string::npos) dCount++;
+	unordered_set<char> distinct;
+	for(char c : input){
+		if(c >= 'a' && c <= 'z') distinct.insert(c);
 	}
-	cout << dCount << "\n";
+	cout << SZ(distinct) << "\n";
 	return 0;
 }
