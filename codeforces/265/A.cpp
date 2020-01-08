@@ -27,8 +27,9 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
 	string s, t; cin >> s >> t;
+	int N = SZ(t);
 	int finalPos = 0;
-	for(int curIdx = 0; curIdx < SZ(t); ++curIdx){
+	for(int curIdx = 0; curIdx < N; ++curIdx){
 		if(t[curIdx] == s[finalPos]) finalPos++;
 	}
 	cout << finalPos + 1 << "\n";
