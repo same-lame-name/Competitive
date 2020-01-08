@@ -29,9 +29,11 @@ int main(){
 	DRII(n, m);
 	int num = 7 - max(n, m);
 	int den = 6;
-	int gcd = __gcd(num, den);
-	num /= gcd; den /= gcd;
-	cout << num << '/' << den << "\n";
-
+	if(num == den) cout << "1/1" << "\n";
+	else{
+		int gcd = __gcd(num, den);
+		num /= gcd; den /= gcd;
+		cout << num << '/' << den << "\n";
+	}
 	return 0;
 }
