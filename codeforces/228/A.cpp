@@ -26,13 +26,11 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 
 int main(){
 	FAST_IO 
-	unordered_map<int, bool> isPresent;
-	int reqC = 0;
+	set<int> distinct;
 	REP(rep, 4){
 		DRI(color);
-		if(isPresent.count(color)) reqC++;
-		isPresent[color] = true;
+		distinct.insert(color);
 	}
-	cout << reqC << "\n";
+	cout << 4 - distinct.size() << "\n";
 	return 0;
 }
