@@ -1,4 +1,20 @@
 {
+  "CF68435168": {
+    "contest_id": 127,
+    "language": "GNU C++14",
+    "path": "codeforces\\127\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Wasted Time",
+    "problem_url": "https://codeforces.com/contest/127/problem/A",
+    "submission_id": "CF68435168",
+    "submission_url": "https://codeforces.com/contest/127/submission/68435168",
+    "tags": [
+      "geometry",
+      "*900"
+    ],
+    "timestamp": "Jan/09/2020 14:11"
+  },
   "CF68435396": {
     "contest_id": 127,
     "language": "GNU C++14",

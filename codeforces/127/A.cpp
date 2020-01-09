@@ -27,18 +27,23 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
 	DRII(N, paper);
+	bool first = true;
 	double lastX, lastY, distance = 0;
+	auto square = [&](double x){
+		return x * x;
+	};
 	REP(rep, N){
 		double x, y;
 		cin >> x >> y;
-		if(rep){
-			distance += sqrt((lastX - x)*(lastX - x) + (lastY - y)*(lastY - y));
+		if(!first){
+			distance += sqrt(square(lastX - x) + square(lastY - y));
 		}
+		first = false;
 		lastX = x;
 		lastY = y;
 	}
 	double time = distance * paper / 50.0;
-	PRECISION(6);
+	PRECISION(7);
 	cout << time << "\n";
 	return 0;
 }
