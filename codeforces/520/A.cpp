@@ -28,14 +28,12 @@ int main(){
 	FAST_IO 
     DRI(N);
     string input; cin >> input;
-    vector<bool> charP(26, false);
-    int encC = 0;
+    unordered_set<char> distinct;
     for(char c : input){
         if(c < 'a') c += ('a' - 'A');
-        if(!charP[c -'a']) encC++;
-        charP[c - 'a'] = true;
+        distinct.insert(c);
     }
-    if(encC == 26) cout << "YES\n";
+    if(SZ(distinct) == 26) cout << "YES\n";
     else cout << "NO\n"; 
 	return 0;
 }
