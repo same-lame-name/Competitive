@@ -28,6 +28,7 @@ int main(){
 	FAST_IO 
     DRI(N);
     int minEle = INT_MAX, maxEle = INT_MIN, minC = 0, maxC = 0;
+    unordered_map<int, int> count;
     REP(rep, N){
         DRI(ele);
         if(ele > maxEle){
