@@ -1,3 +1,12 @@
+
+// Problem : A. Snacktower
+// Contest : Codeforces Round #398 (Div. 2)
+// URL : https://codeforces.com/problemset/problem/767/A
+// Memory Limit : 256.000000 MB 
+// Time Limit : 2000.000000 milisec 
+// Powered by CP Editor (https://github.com/coder3101/cp-editor)
+
+
 #include <bits/stdc++.h>
 #define PRECISION(x) cout << fixed << setprecision(x)
 #define FAST_IO ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
