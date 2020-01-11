@@ -27,19 +27,15 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO 
     DRI(N);
-    int minEle = INT_MAX, maxEle = INT_MIN, minC = 0, maxC = 0;
+    int minEle = INT_MAX, maxEle = INT_MIN;
     unordered_map<int, int> count;
     REP(rep, N){
         DRI(ele);
-        if(ele > maxEle){
-            maxEle = ele;
-            maxC = 1;
-        }else if(ele == maxEle) maxC++;
-        if(ele < minEle){
-            minEle = ele;
-            minC = 1;
-        }else if(ele == minEle) minC++;
+        max_self(maxEle, ele);
+        min_self(minEle, ele);
+        count[ele]++;
     }
+    int maxC = count[maxEle], minC = count[minEle];
     cout << N - (minEle == maxEle ? maxC : maxC + minC) << "\n";
 	return 0;
 }
