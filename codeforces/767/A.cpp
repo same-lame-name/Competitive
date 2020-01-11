@@ -26,11 +26,18 @@ template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 int main(){
 	FAST_IO
     DRI(N);
-    vector<bool> arrived(N + 1, false);
-    while(N){
+    vector<int> arrD(N + 1);
+    vector<vector<int>> pile(N + 1);
+    REP(rep, N){
         DRI(present);
-        arrived[present] = true;
-        while(arrived[N]) cout << N-- << " ";
+        arrD[present] = rep + 1;
+    }
+    for(int pS = N; pS >= 1; --pS){
+        if(pS + 1 <= N && arrD[pS + 1] > arrD[pS]) arrD[pS] = arrD[pS + 1];
+        pile[arrD[pS]].PB(pS);
+    }
+    for(int day = 1; day <= N; ++day){
+        for(int ele : pile[day]) cout << ele << " ";
         cout << "\n";
     }
 	return 0;
