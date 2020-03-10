@@ -1,4 +1,20 @@
 {
+  "AC10740913": {
+    "contest_id": "abc051",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc051\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Back and Forth",
+    "problem_url": "https://atcoder.jp/contests/abc051/tasks/abc051_c",
+    "submission_id": "AC10740913",
+    "submission_url": "https://atcoder.jp/contests/abc051/submissions/10740913",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Mar/10/2020 20:29"
+  },
   "AC10764809": {
     "contest_id": "abc051",
     "language": "C++14 (GCC 5.4.1)",
