@@ -33,13 +33,13 @@ const double EPS = (1e-9);
 
 int main(){
 	FAST_IO
-	int k, s, count = 0;
+	int k, s, count = 0, add = 1;
 	cin >> k >> s;
-	for(int x = 0; x <= k; ++x){
-		for(int y = 0; y <= k; ++y){
-			int z = s - x - y;
-			if(z >= 0 && z <= k) count++;
-		}
+	vector<int> mul = {1, 3, 3, 1};
+	for(int itr = 0; itr < 4; ++itr){
+		if(s < itr * (k + 1)) break;
+		count += add * mul[itr] * (s - itr * (k + 1) + 2) * (s - itr * (k + 1) + 1) / 2;
+		add *= -1;
 	}
 	
 	cout << count << "\n";
