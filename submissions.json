@@ -1,4 +1,20 @@
 {
+  "AC10764809": {
+    "contest_id": "abc051",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc051\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Candidates of No Shortest Paths",
+    "problem_url": "https://atcoder.jp/contests/abc051/tasks/abc051_d",
+    "submission_id": "AC10764809",
+    "submission_url": "https://atcoder.jp/contests/abc051/submissions/10764809",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Mar/11/2020 22:11"
+  },
   "AC11393529": {
     "contest_id": "abc078",
     "language": "C++14 (GCC 5.4.1)",
