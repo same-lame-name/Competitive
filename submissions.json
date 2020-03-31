@@ -1,4 +1,20 @@
 {
+  "AC11393529": {
+    "contest_id": "abc078",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc078\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "HSI",
+    "problem_url": "https://atcoder.jp/contests/abc078/tasks/arc085_a",
+    "submission_id": "AC11393529",
+    "submission_url": "https://atcoder.jp/contests/abc078/submissions/11393529",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Mar/31/2020 17:09"
+  },
   "AC11400194": {
     "contest_id": "abc078",
     "language": "C++14 (GCC 5.4.1)",
