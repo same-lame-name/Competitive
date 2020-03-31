@@ -1,4 +1,20 @@
 {
+  "AC11400194": {
+    "contest_id": "abc078",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc078\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "ABS",
+    "problem_url": "https://atcoder.jp/contests/abc078/tasks/arc085_b",
+    "submission_id": "AC11400194",
+    "submission_url": "https://atcoder.jp/contests/abc078/submissions/11400194",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Mar/31/2020 21:24"
+  },
   "AC11588182": {
     "contest_id": "abc158",
     "language": "C++14 (GCC 5.4.1)",
