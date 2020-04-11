@@ -11,7 +11,7 @@
 #define S second
 
 using namespace std;
-
+ 
 template<class T> void max_self(T & a, const T & b) { if(a < b) a = b; }
 template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 typedef long long LL;
@@ -20,18 +20,16 @@ const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
 
+
 int main(){
-  FAST_IO  
-
-  LL a = 2, b = 1, N, c;
-  cin >> N;
-
-  for(int rep = 0; rep < N - 1; ++rep){
-    c = a + b;
-    a = b;
-    b = c;
-  }
-
-  cout << b;
-  return 0;
+	FAST_IO
+	
+	int N; cin >> N;
+	vector<LL> lucas(90);
+	lucas[0] = 2, lucas[1] = 1;
+	for(int idx = 2; idx <= N; ++idx) lucas[idx] = (lucas[idx - 1] + lucas[idx - 2]);
+	
+	cout << lucas[N] << "\n"; 
+	
+	return 0;
 }
