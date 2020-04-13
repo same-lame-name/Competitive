@@ -1,4 +1,20 @@
 {
+  "AC11888636": {
+    "contest_id": "abc082",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc082\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Good Sequence",
+    "problem_url": "https://atcoder.jp/contests/abc082/tasks/arc087_a",
+    "submission_id": "AC11888636",
+    "submission_url": "https://atcoder.jp/contests/abc082/submissions/11888636",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Apr/13/2020 15:11"
+  },
   "AC11897353": {
     "contest_id": "abc082",
     "language": "C++14 (GCC 5.4.1)",
