@@ -25,14 +25,14 @@ int main(){
   FAST_IO  
   const int nax = 1e4 + 7;
   string s; cin >> s;
-  int x, y, necc = 0; cin >> x >> y;
+  int x, y; cin >> x >> y;
   vector<int> disp[2];
   vector<vector<bool>> hori, verti;
 
   for(int ins = 0, cons = 0, turn = 1, fst = true; ins <= SZ(s); ++ins){
     if(ins == SZ(s) || s[ins] == 'T'){
       if(fst){
-        necc = cons;
+        x -= cons;
         fst = false;
         cons = 0;
         continue;
@@ -43,13 +43,19 @@ int main(){
     }else cons++;
   }
 
+  if(abs(x) > 8000 || abs(y) > 8000){
+    cout << "No\n";
+    return 0;
+  }
+
+
   int X = SZ(disp[0]), Y = SZ(disp[1]);
   hori.resize(X + 1); verti.resize(Y + 1);
 
   for(int pos = 0; pos <= X; ++pos) hori[pos].resize(2 * nax, false);
   for(int pos = 0; pos <= Y; ++pos) verti[pos].resize(2 * nax, false);
 
-  hori[0][necc + nax] = true;
+  hori[0][0 + nax] = true;
   verti[0][0 + nax] = true;
 
   for(int pos = 0; pos < X; ++pos){

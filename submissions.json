@@ -1,4 +1,20 @@
 {
+  "AC11897353": {
+    "contest_id": "abc082",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc082\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "FT Robot",
+    "problem_url": "https://atcoder.jp/contests/abc082/tasks/arc087_b",
+    "submission_id": "AC11897353",
+    "submission_url": "https://atcoder.jp/contests/abc082/submissions/11897353",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Apr/13/2020 19:11"
+  },
   "AC11897578": {
     "contest_id": "abc082",
     "language": "C++14 (GCC 5.4.1)",
