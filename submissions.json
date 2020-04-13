@@ -1,4 +1,20 @@
 {
+  "AC11887554": {
+    "contest_id": "abc082",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc082\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Round Up the Mean",
+    "problem_url": "https://atcoder.jp/contests/abc082/tasks/abc082_a",
+    "submission_id": "AC11887554",
+    "submission_url": "https://atcoder.jp/contests/abc082/submissions/11887554",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Apr/13/2020 14:42"
+  },
   "AC11887794": {
     "contest_id": "abc082",
     "language": "C++14 (GCC 5.4.1)",
