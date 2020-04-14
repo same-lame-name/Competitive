@@ -1,4 +1,20 @@
 {
+  "AC11923367": {
+    "contest_id": "abc083",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc083\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Wide Flip",
+    "problem_url": "https://atcoder.jp/contests/abc083/tasks/arc088_b",
+    "submission_id": "AC11923367",
+    "submission_url": "https://atcoder.jp/contests/abc083/submissions/11923367",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Apr/14/2020 17:34"
+  },
   "AC11943119": {
     "contest_id": "abc084",
     "language": "C++14 (GCC 5.4.1)",
