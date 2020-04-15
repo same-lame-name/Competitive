@@ -1,4 +1,20 @@
 {
+  "AC11945962": {
+    "contest_id": "abc084",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc084\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Special Trains",
+    "problem_url": "https://atcoder.jp/contests/abc084/tasks/abc084_c",
+    "submission_id": "AC11945962",
+    "submission_url": "https://atcoder.jp/contests/abc084/submissions/11945962",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Apr/15/2020 12:50"
+  },
   "AC11948103": {
     "contest_id": "abc084",
     "language": "C++14 (GCC 5.4.1)",
