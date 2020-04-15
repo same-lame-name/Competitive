@@ -1,4 +1,20 @@
 {
+  "AC11943947": {
+    "contest_id": "abc084",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc084\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Postal Code",
+    "problem_url": "https://atcoder.jp/contests/abc084/tasks/abc084_b",
+    "submission_id": "AC11943947",
+    "submission_url": "https://atcoder.jp/contests/abc084/submissions/11943947",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/15/2020 11:38"
+  },
   "AC11945962": {
     "contest_id": "abc084",
     "language": "C++14 (GCC 5.4.1)",
