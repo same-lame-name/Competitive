@@ -43,6 +43,16 @@ int main(){
     y %= 2 * k;
     cell[x][y]++;
   }
+//
+//  for(int r = -1; r < 2 * k; ++r){
+//    for(int c = -1; c < 2 * k; ++c){
+//      cout << cell[r][c] << " ";
+//    }
+//    cout << "\n";
+//  }
+//
+
+//  cout << "\n\n";
 
   for(int r = 0; r < 2 * k; ++r){
     for(int c = 0; c < 2 * k; ++c){
@@ -52,6 +62,13 @@ int main(){
     }
   }
   
+//  for(int r = 0; r < 2 * k; ++r){
+//    for(int c = 0; c < 2 * k; ++c){
+//      cout << cell[r][c] << " ";
+//    }
+//    cout << "\n";
+//  }
+//
   for(int r = 0; r < k; ++r){
     for(int c = 0; c < k; ++c){
       int cur = 0;
