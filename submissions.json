@@ -1,4 +1,20 @@
 {
+  "AC12004638": {
+    "contest_id": "abc086",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc086\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Traveling",
+    "problem_url": "https://atcoder.jp/contests/abc086/tasks/arc089_a",
+    "submission_id": "AC12004638",
+    "submission_url": "https://atcoder.jp/contests/abc086/submissions/12004638",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Apr/17/2020 13:46"
+  },
   "AC12010088": {
     "contest_id": "abc086",
     "language": "C++14 (GCC 5.4.1)",
