@@ -1,4 +1,20 @@
 {
+  "AC12190258": {
+    "contest_id": "abc089",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc089\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Hina Arare",
+    "problem_url": "https://atcoder.jp/contests/abc089/tasks/abc089_b",
+    "submission_id": "AC12190258",
+    "submission_url": "https://atcoder.jp/contests/abc089/submissions/12190258",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/21/2020 11:51"
+  },
   "AC12192756": {
     "contest_id": "abc089",
     "language": "C++14 (GCC 5.4.1)",
