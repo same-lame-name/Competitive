@@ -1,4 +1,20 @@
 {
+  "AC12190139": {
+    "contest_id": "abc089",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc089\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Grouping 2",
+    "problem_url": "https://atcoder.jp/contests/abc089/tasks/abc089_a",
+    "submission_id": "AC12190139",
+    "submission_url": "https://atcoder.jp/contests/abc089/submissions/12190139",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Apr/21/2020 11:46"
+  },
   "AC12190258": {
     "contest_id": "abc089",
     "language": "C++14 (GCC 5.4.1)",
