@@ -1,4 +1,20 @@
 {
+  "AC12193397": {
+    "contest_id": "abc089",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc089\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Practical Skill Test",
+    "problem_url": "https://atcoder.jp/contests/abc089/tasks/abc089_d",
+    "submission_id": "AC12193397",
+    "submission_url": "https://atcoder.jp/contests/abc089/submissions/12193397",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Apr/21/2020 14:06"
+  },
   "AC12512838": {
     "contest_id": "abc090",
     "language": "C++14 (GCC 5.4.1)",
