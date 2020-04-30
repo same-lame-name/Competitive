@@ -24,8 +24,10 @@ int main(){
   FAST_IO  
 
   int row, col; cin >> row >> col;
-  if(row != 1) row -= 2;
-  if(col != 1) col -= 2;
-  cout << (LL)row * col << "\n";
+  if(col < row) swap(row, col);
+  if(row == col && row == 1) cout << "1\n";
+  else if(col < 2) cout << "0\n";
+  else if(row == 1) cout << col - 2 << "\n";
+  else cout << (LL)(col - 2) * (row - 2) << "\n";
   return 0;
 }
