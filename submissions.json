@@ -1,4 +1,20 @@
 {
+  "AC12517262": {
+    "contest_id": "abc090",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc090\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Flip,Flip, and Flip......",
+    "problem_url": "https://atcoder.jp/contests/abc090/tasks/arc091_a",
+    "submission_id": "AC12517262",
+    "submission_url": "https://atcoder.jp/contests/abc090/submissions/12517262",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Apr/30/2020 17:22"
+  },
   "AC12520554": {
     "contest_id": "abc090",
     "language": "C++14 (GCC 5.4.1)",
