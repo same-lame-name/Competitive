@@ -35,10 +35,9 @@ int main(){
 
   for(int day = 0; day < N - 1; ++day){
     for(int c = 0; c < 3; ++c){
-      for(int p = 0; p < 3; ++p){
-        if(p == c) continue;
-        max_self(opt[day + 1][p],
-                 opt[day][c] + val[day + 1][p]);
+      for(int rep = 1; rep < 3; ++rep){
+        max_self(opt[day + 1][(c + rep) % 3],
+                 opt[day][c] + val[day + 1][(c + rep) % 3]);
       }
     }
   }
