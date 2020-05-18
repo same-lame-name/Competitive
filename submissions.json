@@ -1,4 +1,20 @@
 {
+  "AC13375882": {
+    "contest_id": "abc096",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc096\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Day of Takahashi",
+    "problem_url": "https://atcoder.jp/contests/abc096/tasks/abc096_a",
+    "submission_id": "AC13375882",
+    "submission_url": "https://atcoder.jp/contests/abc096/submissions/13375882",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "May/18/2020 16:54"
+  },
   "AC13376018": {
     "contest_id": "abc096",
     "language": "C++14 (GCC 5.4.1)",
