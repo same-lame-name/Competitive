@@ -22,15 +22,11 @@ const double EPS = (1e-9);
 LL N, k, fl[55], f[55];
 
 LL g(LL layer, int rank){
-//  if(rank == 0){
-//    return (layer > 0);
-//  }
-
-  if(layer == 0) return 0LL;
+  if(rank == 0){
+    return (layer > 0);
+  }
 
   assert(rank >= 0);
-  if(layer == fl[rank]) return f[rank];
-
 //  assert(layer >= 0);
 
   if(layer <= 1 + fl[rank - 1]) return g(layer - 1, rank - 1);
