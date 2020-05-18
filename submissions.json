@@ -1,4 +1,20 @@
 {
+  "AC13378693": {
+    "contest_id": "abc096",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc096\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Five, Five Everywhere",
+    "problem_url": "https://atcoder.jp/contests/abc096/tasks/abc096_d",
+    "submission_id": "AC13378693",
+    "submission_url": "https://atcoder.jp/contests/abc096/submissions/13378693",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "May/18/2020 18:11"
+  },
   "AC13402661": {
     "contest_id": "abc057",
     "language": "C++14 (GCC 5.4.1)",
