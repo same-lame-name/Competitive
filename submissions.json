@@ -1,4 +1,20 @@
 {
+  "AC13405059": {
+    "contest_id": "abc057",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc057\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Maximum Average Sets",
+    "problem_url": "https://atcoder.jp/contests/abc057/tasks/abc057_d",
+    "submission_id": "AC13405059",
+    "submission_url": "https://atcoder.jp/contests/abc057/submissions/13405059",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "May/19/2020 17:44"
+  },
   "AC13559604": {
     "contest_id": "abc099",
     "language": "C++14 (GCC 5.4.1)",
