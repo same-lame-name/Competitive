@@ -42,18 +42,19 @@ int main(){
   }
 
   for(int o = 1; o <= C; ++o){
-    for(int t = 1; t <= C; ++t){
-      for(int th = 1, cost; th <= C; ++th){
-        if(o == t || t == th || o == th) continue;
+    for(int t = o + 1; t <= C; ++t){
+      for(int th = t + 1, cost; th <= C; ++th){
         per[0] = o, per[1] = t, per[2] = th;
-        cost = 0;
-        for(int g = 0; g < 3; ++g){
-          for(int c = 1; c <= C; ++c){
-            cost += grp[g][c] * cst[c][per[g]];
+        do{
+          cost = 0;
+          for(int g = 0; g < 3; ++g){
+            for(int c = 1; c <= C; ++c){
+              cost += grp[g][c] * cst[c][per[g]];
+            }
           }
-        }
 
-        min_self(opt, cost);
+          min_self(opt, cost);
+        }while(next_permutation(per, per + 3));
       }
     }
   }
