@@ -1,4 +1,20 @@
 {
+  "AC13614051": {
+    "contest_id": "abc077",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc077\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Snuke Festival",
+    "problem_url": "https://atcoder.jp/contests/abc077/tasks/arc084_a",
+    "submission_id": "AC13614051",
+    "submission_url": "https://atcoder.jp/contests/abc077/submissions/13614051",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "May/26/2020 12:36"
+  },
   "AC13642324": {
     "contest_id": "abc077",
     "language": "C++14 (GCC 5.4.1)",
