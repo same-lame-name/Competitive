@@ -32,11 +32,6 @@ int main(){
 
   while(!BFS.empty()){
     int cur = BFS.front();
-    if(cur == 0){
-      cout << dist[cur] << '\n';
-      return 0;
-    }
-
     BFS.pop_front();
 
     int nxt = (cur + 1) % K;
@@ -52,5 +47,6 @@ int main(){
     }
   }
 
+  cout << dist[0] << '\n';
   return 0;
 }
