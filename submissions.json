@@ -1,4 +1,20 @@
 {
+  "AC13663266": {
+    "contest_id": "abc158",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc158\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Removing Robots",
+    "problem_url": "https://atcoder.jp/contests/abc158/tasks/abc158_f",
+    "submission_id": "AC13663266",
+    "submission_url": "https://atcoder.jp/contests/abc158/submissions/13663266",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "May/28/2020 15:46"
+  },
   "AC13680650": {
     "contest_id": "abc153",
     "language": "C++14 (GCC 5.4.1)",
