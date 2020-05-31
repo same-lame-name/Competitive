@@ -1,4 +1,20 @@
 {
+  "AC13769968": {
+    "contest_id": "abc054",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc054\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Template Matching",
+    "problem_url": "https://atcoder.jp/contests/abc054/tasks/abc054_b",
+    "submission_id": "AC13769968",
+    "submission_url": "https://atcoder.jp/contests/abc054/submissions/13769968",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "May/31/2020 15:19"
+  },
   "AC13770205": {
     "contest_id": "abc054",
     "language": "C++14 (GCC 5.4.1)",
