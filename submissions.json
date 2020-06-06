@@ -1,4 +1,20 @@
 {
+  "AC14071220": {
+    "contest_id": "abc101",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc101\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Eating Symbols Easy",
+    "problem_url": "https://atcoder.jp/contests/abc101/tasks/abc101_a",
+    "submission_id": "AC14071220",
+    "submission_url": "https://atcoder.jp/contests/abc101/submissions/14071220",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/06/2020 20:04"
+  },
   "AC14071361": {
     "contest_id": "abc101",
     "language": "C++14 (GCC 5.4.1)",
