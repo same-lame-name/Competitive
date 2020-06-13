@@ -20,12 +20,13 @@ const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
 int testcases, N, M, len, total;
-pair<int, int> cnt[65];
+vector<pair<int, int>> cnt;
 
 void solve(){
-  total = 0;
+  cnt.clear();
+  cnt.resize(N + M - 1);
   len = N + M - 1;
-  for(int pos = 0; pos < len; ++pos) cnt[pos] = MP(0, 0);
+  total = 0;
 
   for(int r = 0; r < N; ++r){
     for(int c = 0, x; c < M; ++c){
@@ -61,3 +62,4 @@ int main(){
 
   return 0;
 }
+
