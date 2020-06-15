@@ -1,4 +1,21 @@
 {
+  "CF83818746": {
+    "contest_id": 1352,
+    "language": "GNU C++17",
+    "path": "codeforces\\1352\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "K-th Not Divisible by n",
+    "problem_url": "https://codeforces.com/contest/1352/problem/C",
+    "submission_id": "CF83818746",
+    "submission_url": "https://codeforces.com/contest/1352/submission/83818746",
+    "tags": [
+      "binary search",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Jun/15/2020 12:48"
+  },
   "CF83823087": {
     "contest_id": 1352,
     "language": "GNU C++17",
