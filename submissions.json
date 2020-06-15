@@ -1,4 +1,20 @@
 {
+  "CF83865318": {
+    "contest_id": 56,
+    "language": "GNU C++17",
+    "path": "codeforces\\56\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Changing a String",
+    "problem_url": "https://codeforces.com/contest/56/problem/D",
+    "submission_id": "CF83865318",
+    "submission_url": "https://codeforces.com/contest/56/submission/83865318",
+    "tags": [
+      "dp",
+      "*2100"
+    ],
+    "timestamp": "Jun/15/2020 22:55"
+  },
   "CF83866665": {
     "contest_id": 56,
     "language": "GNU C++17",

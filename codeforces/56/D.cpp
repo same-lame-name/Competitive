@@ -34,21 +34,24 @@ int solve(int f, int t){
   cst = INF;
 
   if(in[f] == text[t]){
-    action[f][t] = 'x';
-    return cst = solve(f + 1, t + 1);
+    x = solve(f + 1, t + 1);
+    if(x < cst){
+      action[f][t] = 'x';
+      cst = x;
+    }
+  }
+
+  // Try inserting at the position t.
+  x = 1 + solve(f, t + 1);
+  if(x < cst){
+    action[f][t] = 'i';
+    cst = x;
   }
 
   // Try replacing character at postion t.
   x = 1 + solve(f + 1, t + 1);
   if(x < cst){
     action[f][t] = 'r';
-    cst = x;
-  }
-  
-  // Try inserting at the position t.
-  x = 1 + solve(f, t + 1);
-  if(x < cst){
-    action[f][t] = 'i';
     cst = x;
   }
 
