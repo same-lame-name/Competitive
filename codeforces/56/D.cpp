@@ -12,12 +12,8 @@
 
 using namespace std;
  
-template<class T> bool max_self(T & a, const T & b){ 
-  return b > a ? a = b, true : false; 
-}
-template<class T> bool min_self(T & a, const T & b){ 
-  return b < a ? a = b, true : false;    
-}
+template<class T> void max_self(T & a, const T & b) { if(a < b) a = b; }
+template<class T> void min_self(T & a, const T & b) { if(a > b) a = b; }
 typedef long long LL;
 const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
@@ -26,13 +22,14 @@ const double EPS = (1e-9);
 int N, M, memo[1005][1005];
 string in, text;
 char action[1005][1005];
+map<char, pair<int, int>> diff;
 
 int solve(int f, int t){
   if(f == N || t == M){
     return (N - f) + (M - t);
   }
 
-  int &cst = memo[f][t];
+  int &cst = memo[f][t], x;
   if(cst != -1) return cst;
   cst = INF;
 
@@ -42,13 +39,25 @@ int solve(int f, int t){
   }
 
   // Try replacing character at postion t.
-  if(min_self(cst, 1 + solve(f + 1, t + 1))) action[f][t] = 'r';
+  x = 1 + solve(f + 1, t + 1);
+  if(x < cst){
+    action[f][t] = 'r';
+    cst = x;
+  }
   
   // Try inserting at the position t.
-  if(min_self(cst, 1 + solve(f, t + 1))) action[f][t] = 'i';
+  x = 1 + solve(f, t + 1);
+  if(x < cst){
+    action[f][t] = 'i';
+    cst = x;
+  }
 
   // Try deleting the character at position t.
-  if(min_self(cst, 1 + solve(f + 1, t))) action[f][t] = 'd';
+  x = 1 + solve(f + 1, t);
+  if(x < cst){
+    action[f][t] = 'd';
+    cst = x;
+  }
 
   return cst;
 }
@@ -74,13 +83,18 @@ int main(){
   N = SZ(in), M = SZ(text);
   memset(memo, -1, sizeof memo);
 
+  diff['x'] = MP(1, 1);
+  diff['i'] = MP(0, 1);
+  diff['d'] = MP(1, 0);
+  diff['r'] = MP(1, 1);
+
   cout << solve(0, 0) << '\n';
   int f = 0, t = 0;
   while(f < N && t < M){
     char op = action[f][t];
     print(op, t);
-    if(op != 'i') f++;
-    if(op != 'd') t++;
+    f += diff[op].F;
+    t += diff[op].S;
   }
 
   while(f < N){
