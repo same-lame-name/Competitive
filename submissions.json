@@ -1,4 +1,20 @@
 {
+  "CF83836566": {
+    "contest_id": 82,
+    "language": "GNU C++17",
+    "path": "codeforces\\82\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Two out of Three",
+    "problem_url": "https://codeforces.com/contest/82/problem/D",
+    "submission_id": "CF83836566",
+    "submission_url": "https://codeforces.com/contest/82/submission/83836566",
+    "tags": [
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Jun/15/2020 17:06"
+  },
   "CF83865318": {
     "contest_id": 56,
     "language": "GNU C++17",
