@@ -27,23 +27,28 @@ const LL INF = 1e18;
 int N, num[(int)1e5 + 7];
 LL memo[(int)1e5 + 7][2];
 
+LL solve(int idx, bool change){
+  if(idx == N - 1){
+    if(change) return num[idx] * -1LL;
+    return num[idx];
+  }
+
+  LL &sum = memo[idx][change];
+  if(sum != -1) return sum;
+  sum = -INF;
+
+  max_self(sum, num[idx] * (change ? -1LL : 1LL) + solve(idx + 1, false));
+  max_self(sum, num[idx] * (change ? 1LL : -1LL) + solve(idx + 1, true));
+
+  return sum;
+}
+
 int main(){
   FAST_IO
   memset(memo, -1, sizeof memo);
   cin >> N;
   for(int idx = 0; idx < N; ++idx) cin >> num[idx];
 
-  memo[N - 1][0] = num[N - 1];
-  memo[N - 1][1] = -1LL * num[N - 1];
-
-  for(int idx = N - 2; idx >= 0; --idx){
-    memo[idx][0] = max(num[idx] + memo[idx + 1][0],
-                       num[idx] * -1LL + memo[idx + 1][1]);
-
-    memo[idx][1] = max(num[idx] * -1LL + memo[idx + 1][0],
-                       num[idx] + memo[idx + 1][1]);
-  }
-
-  cout << memo[0][0] << '\n';
+  cout << solve(0, false) << '\n';
   return 0;
 }
