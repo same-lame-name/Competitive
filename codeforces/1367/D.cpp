@@ -23,34 +23,43 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int testcases, N, placed, cur, diff[55], cnt[30];
-string in, to;
+int testcases, N, placed, cur, diff[55], cnt[30], config[55];
+string in;
+char to[55];
+bool done[55];
 vector<int> indices;
 
 void solve(){
-  memset(cnt, 0, sizeof cnt);
-  to.resize(N, ' ');
+  memset(done, false, sizeof done);
+  for(int idx = 0; idx < N; ++idx) config[idx] = 0;
 
+  for(int c = 0; c < 26; ++c) cnt[c] = 0;
   for(char c : in) cnt[c - 'a']++;
   placed = 0, cur = 25;
 
   while(placed < N){
+    assert(cur >= 0);
     indices.clear();
     for(int idx = 0; idx < N; ++idx){
-      if(diff[idx] == 0) indices.PB(idx);
+      if(config[idx] == diff[idx] && !done[idx]){
+        indices.PB(idx);
+      }
     }
 
     while(cur >= 0 && cnt[cur] < SZ(indices)) cur--;
+    assert(cur >= 0);
+
     
     for(int ele : indices){
-      diff[ele] = INF;
+      done[ele] = true;
       to[ele] = char('a' + cur);
     }
 
+
     for(int ele : indices){
       for(int idx = 0; idx < N; ++idx){
-        if(diff[idx] == INF) continue;
-        diff[idx] -= abs(idx - ele);
+        if(done[idx]) continue;
+        config[idx] += abs(ele - idx);
       }
     }
 
