@@ -1,4 +1,21 @@
 {
+  "CF84139631": {
+    "contest_id": 706,
+    "language": "GNU C++17",
+    "path": "codeforces\\706\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Hard problem",
+    "problem_url": "https://codeforces.com/contest/706/problem/C",
+    "submission_id": "CF84139631",
+    "submission_url": "https://codeforces.com/contest/706/submission/84139631",
+    "tags": [
+      "dp",
+      "strings",
+      "*1600"
+    ],
+    "timestamp": "Jun/18/2020 14:03"
+  },
   "CF84139756": {
     "contest_id": 706,
     "language": "GNU C++17",

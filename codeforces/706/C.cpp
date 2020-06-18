@@ -26,8 +26,8 @@ const double EPS = (1e-9);
 const LL INF = 1e18;
 
 int N, cost[(int)1e5 + 7];
-string in[(int)1e5 + 7];
-LL bst, memo[(int)1e5 + 7][2]; 
+string in[(int)2e5 + 7];
+LL bst, memo[(int)2e5 + 7][2]; 
 
 bool ok(bool revC, bool revP, int idx){
   string prev = in[idx - 1];
