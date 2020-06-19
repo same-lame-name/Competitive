@@ -1,4 +1,20 @@
 {
+  "AC14466148": {
+    "contest_id": "abc117",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc117\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Entrance Examination",
+    "problem_url": "https://atcoder.jp/contests/abc117/tasks/abc117_a",
+    "submission_id": "AC14466148",
+    "submission_url": "https://atcoder.jp/contests/abc117/submissions/14466148",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/19/2020 11:18"
+  },
   "AC14466202": {
     "contest_id": "abc117",
     "language": "C++ (GCC 9.2.1)",
