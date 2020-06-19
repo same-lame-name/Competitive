@@ -24,36 +24,34 @@ const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
 int N, M, total = 0;
-bool okay[105];
+bool del[105], okay[105];
 string grid[105];
 
 int main(){
   FAST_IO
   cin >> N >> M;
+  memset(del, false, sizeof del);
   memset(okay, false, sizeof okay);
   for(int r = 0; r < N; ++r) cin >> grid[r];
 
   for(int c = 0; c < M; ++c){
     vector<int> util;
-    bool del = false;
     for(int r = 1; r < N; ++r){
       if(okay[r]) continue;
 
       if(grid[r][c] < grid[r - 1][c]){
-        del = true;
-        break;
+        del[c] = true;
       }else if(grid[r][c] > grid[r - 1][c]){
         util.PB(r);
       }
     }
 
-    if(!del){
+    if(!del[c]){
       for(int ele : util) okay[ele] = true;
     }
-
-    total += del;
   }
 
+  for(int c = 0; c < M; ++c) total += del[c];
   cout << total << '\n';
   return 0;
 }
