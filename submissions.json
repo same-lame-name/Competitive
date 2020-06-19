@@ -1,4 +1,20 @@
 {
+  "AC14466414": {
+    "contest_id": "abc117",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc117\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Streamline",
+    "problem_url": "https://atcoder.jp/contests/abc117/tasks/abc117_c",
+    "submission_id": "AC14466414",
+    "submission_url": "https://atcoder.jp/contests/abc117/submissions/14466414",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jun/19/2020 11:36"
+  },
   "AC14467460": {
     "contest_id": "abc117",
     "language": "C++ (GCC 9.2.1)",
