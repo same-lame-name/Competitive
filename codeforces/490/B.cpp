@@ -39,7 +39,6 @@ int main(){
   for(int ele : h){
     if(t.count(ele)) continue;
     head = ele;
-    break;
   }
 
   int even = head, odd = nxt[0];
