@@ -1,4 +1,20 @@
 {
+  "AC14491904": {
+    "contest_id": "abc121",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc121\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "White Cells",
+    "problem_url": "https://atcoder.jp/contests/abc121/tasks/abc121_a",
+    "submission_id": "AC14491904",
+    "submission_url": "https://atcoder.jp/contests/abc121/submissions/14491904",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/20/2020 15:07"
+  },
   "AC14492008": {
     "contest_id": "abc121",
     "language": "C++ (GCC 9.2.1)",
