@@ -39,7 +39,8 @@ int main(){
     }
   }
 
-  for(int idx = N; idx >= 0; --idx){
+  opt[N] = 1;
+  for(int idx = N - 1; idx >= 0; --idx){
     opt[idx] = INF;
     for(int c = 0, match; c < 26; ++c){
       match = nxt[idx][c];

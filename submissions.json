@@ -1,4 +1,20 @@
 {
+  "AC14487070": {
+    "contest_id": "arc081",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc081\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Don't Be a Subsequence",
+    "problem_url": "https://atcoder.jp/contests/arc081/tasks/arc081_c",
+    "submission_id": "AC14487070",
+    "submission_url": "https://atcoder.jp/contests/arc081/submissions/14487070",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/20/2020 11:19"
+  },
   "AC14487180": {
     "contest_id": "arc081",
     "language": "C++ (GCC 9.2.1)",
