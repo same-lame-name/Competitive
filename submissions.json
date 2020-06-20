@@ -1,4 +1,20 @@
 {
+  "AC14492008": {
+    "contest_id": "abc121",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc121\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Can you solve this?",
+    "problem_url": "https://atcoder.jp/contests/abc121/tasks/abc121_b",
+    "submission_id": "AC14492008",
+    "submission_url": "https://atcoder.jp/contests/abc121/submissions/14492008",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jun/20/2020 15:12"
+  },
   "AC14492115": {
     "contest_id": "abc121",
     "language": "C++ (GCC 9.2.1)",
