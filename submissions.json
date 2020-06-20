@@ -1,4 +1,20 @@
 {
+  "AC14492115": {
+    "contest_id": "abc121",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc121\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Energy Drink Collector",
+    "problem_url": "https://atcoder.jp/contests/abc121/tasks/abc121_c",
+    "submission_id": "AC14492115",
+    "submission_url": "https://atcoder.jp/contests/abc121/submissions/14492115",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jun/20/2020 15:17"
+  },
   "AC14493271": {
     "contest_id": "abc121",
     "language": "C++ (GCC 9.2.1)",
