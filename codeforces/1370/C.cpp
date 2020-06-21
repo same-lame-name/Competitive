@@ -44,10 +44,14 @@ void solve(){
       even *= 2;
     }
 
+    assert(even >= 2 && (N & 1));
     if(N == 1) winner = 1;
     else if(even > 2) winner = 0;
-    else if(div(N)) winner = 0;
-    else winner = 1;
+    else{
+      assert(N >= 3 && even == 2);
+      if(div(N)) winner = 0;
+      else winner = 1;
+    }
   }
 
   if(winner) cout << "FastestFinger\n";
