@@ -1,4 +1,20 @@
 {
+  "AC14521868": {
+    "contest_id": "abc103",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc103\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Islands War",
+    "problem_url": "https://atcoder.jp/contests/abc103/tasks/abc103_d",
+    "submission_id": "AC14521868",
+    "submission_url": "https://atcoder.jp/contests/abc103/submissions/14521868",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jun/21/2020 14:38"
+  },
   "AC14607601": {
     "contest_id": "abc169",
     "language": "C++ (GCC 9.2.1)",
