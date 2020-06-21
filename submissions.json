@@ -1,4 +1,20 @@
 {
+  "AC14521033": {
+    "contest_id": "abc103",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc103\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Modulo Summation",
+    "problem_url": "https://atcoder.jp/contests/abc103/tasks/abc103_c",
+    "submission_id": "AC14521033",
+    "submission_url": "https://atcoder.jp/contests/abc103/submissions/14521033",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jun/21/2020 14:06"
+  },
   "AC14521868": {
     "contest_id": "abc103",
     "language": "C++ (GCC 9.2.1)",
