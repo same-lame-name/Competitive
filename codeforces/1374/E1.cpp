@@ -35,16 +35,23 @@ bool check(int x, int y, int z){
 }
 
 void solve(){
-  int cost = 0;
+  int f = SZ(fst), s = SZ(sec), b = SZ(both), cost = 0;
+  bool ok = true;
   for(int rep = 0, x = 0, y = 0, z = 0; rep < k; ++rep){
-   if(check(x, y, z)){
+    if((x == f || y == s) && z == b){
+      ok = false;
+      break;
+    }
+
+    if(check(x, y, z)){
       cost += fst[x++] + sec[y++];
     }else{
       cost += both[z++];
     }
   }
 
-  cout << cost << '\n';
+  if(!ok) cout << "-1\n";
+  else cout << cost << '\n';
   return;
 }
 
@@ -56,11 +63,6 @@ int main(){
     if(a > 0 && b > 0) both.PB(t);
     else if(a > 0) fst.PB(t);
     else if(b > 0) sec.PB(t);
-  }
-
-  if(min(SZ(fst), SZ(sec)) + SZ(both) < k){
-    cout << "-1\n";
-    return 0;
   }
 
   sort(ALL(fst));
