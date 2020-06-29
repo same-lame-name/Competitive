@@ -44,10 +44,20 @@ void solve(){
     }
 
     if(check(x, y, z)){
-      cost += fst[x++] + sec[y++];
+      assert(x < f && y < s);
+      cost += fst[x] + sec[y];
+      x++;
+//      cout << "this time we choose different with cost " << fst[x] + sec[y] << '\n';
+      y++;
     }else{
-      cost += both[z++];
+      assert(z < b);
+//      cout << "this time we choose same book with cost " << both[z] << '\n';
+      cost += both[z];
+      z++;
     }
+
+//    cout << "after the first placement " << x << " " << y << " " << z << " and cost equals " << cost << '\n';
+
   }
 
   if(!ok) cout << "-1\n";
@@ -60,9 +70,18 @@ int main(){
   cin >> N >> k;
   for(int rep = 0, a, b, t; rep < N; ++rep){
     cin >> t >> a >> b;
-    if(a > 0 && b > 0) both.PB(t);
-    else if(a > 0) fst.PB(t);
-    else if(b > 0) sec.PB(t);
+    if(a > 0 && b > 0){
+      both.PB(t);
+//      cout << "b \n";
+    }
+    else if(a > 0){
+      fst.PB(t);
+//      cout << "f \n";
+    }
+    else if(b > 0){
+      sec.PB(t);
+//      cout << "s \n";
+    }
   }
 
   sort(ALL(fst));
