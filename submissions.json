@@ -1,4 +1,23 @@
 {
+  "CF85605568": {
+    "contest_id": 735,
+    "language": "GNU C++17",
+    "path": "codeforces\\735\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Tennis Championship",
+    "problem_url": "https://codeforces.com/contest/735/problem/C",
+    "submission_id": "CF85605568",
+    "submission_url": "https://codeforces.com/contest/735/submission/85605568",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Jul/01/2020 14:14"
+  },
   "CF85616111": {
     "contest_id": 330,
     "language": "GNU C++17",
