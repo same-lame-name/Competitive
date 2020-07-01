@@ -23,33 +23,53 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int N, k, testcases;
-bool grid[305][305];
+int testcases, N, k;
+int grid[305][305];
+
+int sq(int a){
+  return a * a;
+}
 
 void solve(){
-  memset(grid, false, sizeof grid);
-  int all = k / N, extra = k - all * N, col = 0;
+  int all = k / N, extra = k - all * N;
+  int minc = INF, maxc = 0, minr = all, maxr = all + (extra > 0);
+  deque<int> order;
+  for(int c = 0; c < N; ++c) order.push_back(c);
+
+  for(int r = 0; r < N; ++r){
+    for(int c = 0; c < N; ++c) grid[r][c] = 0;
+  }
+
+  assert(SZ(order) == N);
 
   for(int r = 0, req; r < N; ++r){
     req = all;
     if(r < extra) req++;
 
-    for(int rep = 0; rep < req; ++rep){
-      grid[r][col] = true;
-      col = (col + 1) % N;
+    for(int rep = 0, c; rep < req; ++rep){
+      c = order.front();
+      grid[r][c] = 1;
+      order.pop_front();
+      order.push_back(c);
     }
   }
 
-  if(k % N) cout << "2\n";
-  else cout << "0\n";
+  for(int c = 0; c < N; ++c){
+    int cnt = 0;
+    for(int r = 0; r < N; ++r) cnt += grid[r][c];
+    min_self(minc, cnt);
+    max_self(maxc, cnt);
+  }
 
-  for(int r = 0; r < N; ++r, cout << '\n'){
-    for(int c = 0; c < N; ++c) cout << (grid[r][c] ? 1 : 0);
+  cout << sq(maxr - minr) + sq(maxc - minc) << '\n';
+  for(int r = 0; r < N; ++r){
+    for(int c = 0; c < N; ++c) cout << grid[r][c];
+    cout << '\n';
   }
 
   return;
 }
-
+      
 int main(){
   FAST_IO
   cin >> testcases;
