@@ -1,4 +1,20 @@
 {
+  "AC14956950": {
+    "contest_id": "abc127",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc127\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Algae",
+    "problem_url": "https://atcoder.jp/contests/abc127/tasks/abc127_b",
+    "submission_id": "AC14956950",
+    "submission_url": "https://atcoder.jp/contests/abc127/submissions/14956950",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jul/05/2020 14:13"
+  },
   "AC14957290": {
     "contest_id": "abc127",
     "language": "C++ (GCC 9.2.1)",
