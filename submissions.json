@@ -1,4 +1,21 @@
 {
+  "CF86134929": {
+    "contest_id": 84,
+    "language": "GNU C++17",
+    "path": "codeforces\\84\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Biathlon",
+    "problem_url": "https://codeforces.com/contest/84/problem/C",
+    "submission_id": "CF86134929",
+    "submission_url": "https://codeforces.com/contest/84/submission/86134929",
+    "tags": [
+      "binary search",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Jul/06/2020 20:21"
+  },
   "CF86206531": {
     "contest_id": 903,
     "language": "GNU C++17",
