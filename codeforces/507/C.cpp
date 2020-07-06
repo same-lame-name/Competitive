@@ -23,36 +23,29 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int H, h = 0;
-LL n, visit = 0, mid, l, r;
-bool turn = true;
+LL H, n;
+
+LL util(bool moveright, int h, LL l, LL r){
+  if(h == H){
+    assert(l == r && l == n);
+    return 0;
+  }
+
+  LL ret = 1, mid = (l + r) / 2;
+  bool right = (n > mid);
+
+  if(moveright ^ right) ret += (1LL << (H - h)) - 1;
+
+  if(right) return ret + util(false, h + 1, mid + 1, r);
+  else return ret + util(true, h + 1, l, mid);
+
+}
 
 int main(){
   FAST_IO
   cin >> H >> n;
-  l = 1, r = (1LL << H);
 
-  while(h < H){
-    mid = (l + r) >> 1;
-    if(n > mid){
-      if(turn) visit += (1LL << (H - h));
-      else visit += 1;
-
-      turn = true;
-      l = mid + 1;
-    }else{
-      if(turn) visit += 1;
-      else visit += (1LL << (H - h));
-
-      turn = false;
-      r = mid;
-    }
-
-    h++;
-  }
-
-  assert(l == n && r == n);
-  cout << visit << '\n';
+  cout << util(false, 0, 1, (1LL << H));
   return 0;
 }
 
