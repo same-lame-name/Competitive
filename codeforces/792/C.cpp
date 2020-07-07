@@ -23,76 +23,59 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-string in, bst;
-int N;
-bool zero = false;
-
-void compare(string a){
-  if(SZ(a) > SZ(bst)) bst = a;
-  return;
-}
-
-void util(int st){
-  string cur = in.substr(st);
-
-  int ext = 0, M = SZ(cur);
-  for(char c : cur) ext += c - '0';
-  ext = ext % 3;
-
-  // Already divisible by three.
-  if(ext == 0){
-    compare(cur);
-    return;
-  }
-
-  // Check if we can make it divisible by removing only one.
-  for(int idx = M - 1, dig; idx > 0; --idx){
-    dig = cur[idx] - '0';
-    if(dig % 3 == ext){
-      cur.erase(idx, 1);
-      compare(cur);
-      return;
-    }
-  }
-
-  assert(SZ(cur) == M);
-  // Check if we can make it divisible by removing two.
-  for(int idx = M - 1, dig, cnt = 0; idx > 0; --idx){
-    dig = cur[idx] - '0';
-    if(dig % 3 == 0) continue;
-    if(dig % 3 != ext){
-      cur.erase(idx, 1);
-      cnt++;
-    }
-
-    if(cnt == 2){
-      compare(cur);
-      return;
-    }
-  }
-
-  return;
-}
+string in;
+int N, ext = 0, penalty = 0, opt = INF;
+vector<int> indices[5], bst;
 
 int main(){
   FAST_IO
   cin >> in;
-
   N = SZ(in);
-  for(int idx = 0, cnt = 0; idx < N; ++idx){
-    if(in[idx] == '0'){
-      zero = true;
-      continue;
-    }
 
-    cnt++;
-    if(cnt <= 3) util(idx);
+  for(int idx = N - 1, dig; idx >= 0; --idx){
+    dig = in[idx] - '0';
+    dig = dig % 3;
+    ext += dig;
+    if(SZ(indices[dig]) < 2) indices[dig].PB(idx);
   }
 
-  if(SZ(bst)) cout << bst << '\n';
-  else if(zero) cout << "0\n";
-  else cout << "-1\n";
+  ext = ext % 3;
+  if(ext == 0) goto direct;
 
+  for(int idx = 1; idx < N; ++idx){
+    if(in[idx] == '0') penalty++;
+    else break;
+  }
+
+  for(int use : {1, 2}){
+    int cst = (use == ext ? 1 : 2);
+    if(SZ(indices[use]) < cst) continue;
+
+    bool front = false;
+    vector<int> cur;
+    for(int rep = 0, idx; rep < cst; ++rep){
+      idx = indices[use][rep];
+      cur.PB(idx);
+      if(idx == 0) front = true;
+    }
+
+    if(front) cst += penalty;
+    if(min_self(opt, cst)) bst = cur;
+  }
+  
+  if(SZ(bst) == N){
+    cout << "-1\n";
+    return 0;
+  }
+
+  for(int idx : bst) in.erase(idx, 1);
+  
+  direct:
+  int idx = 0;
+  while(idx < SZ(in) - 1 && in[idx] == '0') idx++;
+  in = in.substr(idx);
+
+  cout << in;
   return 0;
 }
 
