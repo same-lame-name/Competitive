@@ -1,4 +1,22 @@
 {
+  "CF86219347": {
+    "contest_id": 534,
+    "language": "GNU C++17",
+    "path": "codeforces\\534\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Covered Path",
+    "problem_url": "https://codeforces.com/contest/534/problem/B",
+    "submission_id": "CF86219347",
+    "submission_url": "https://codeforces.com/contest/534/submission/86219347",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Jul/07/2020 22:26"
+  },
   "CF86258242": {
     "contest_id": 792,
     "language": "GNU C++17",
