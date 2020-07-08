@@ -33,17 +33,12 @@ int main(){
   FAST_IO
   cin >> name >> N;
 
-  auto up = [&](string &a, string &b){
+  auto up = [&](string &a, string &b, int c){
     if(a != name && b != name) return;
 
     assert(a != b);
     if(a != name) swap(a, b);
-    int &val = pri[b];
-
-    if(ac == "likes") val += 5;
-    else if(ac == "posted") val += 15;
-    else val += 10;
-
+    pri[b] += c;
     return;
   };
 
@@ -52,13 +47,25 @@ int main(){
     getline(cin, util);
     stringstream ss(util);
     
-    ss >> x >> ac >> y;
-    if(ac != "likes") ss >> y;
-
-    y.pop_back();
-    y.pop_back();
-
-    up(x, y);
+    ss >> x >> ac;
+    if(ac == "likes"){
+      ss >> y;
+      y.pop_back();
+      y.pop_back();
+      up(x, y, 5);
+    }
+    else if(ac == "posted"){
+      ss >> y >> y;
+      y.pop_back();
+      y.pop_back();
+      up(x, y, 15);
+    }
+    else{
+      ss >> y >> y;
+      y.pop_back();
+      y.pop_back();
+      up(x, y, 10);
+    }
 
     if(x != name) all.insert(x);
     if(y != name) all.insert(y);
