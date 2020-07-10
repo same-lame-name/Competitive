@@ -29,11 +29,6 @@ bool opt[5][1005];
 int main(){
   FAST_IO
   cin >> N >> M;
-  if(N > M){
-    cout << "YES\n";
-    return 0;
-  }
-
   memset(opt, false, sizeof opt);
 
   for(int rep = 1; rep <= N; ++rep){
@@ -52,7 +47,7 @@ int main(){
       opt[cur][p] = true;
       nxt = p + num[idx];
 
-      assert(p <= 2 * M - 2);
+      assert(nxt <= 2 * M - 2);
       if(nxt >= M) nxt -= M;
 
       if(nxt == 0){
