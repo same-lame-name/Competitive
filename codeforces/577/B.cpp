@@ -31,10 +31,7 @@ int main(){
   cin >> N >> M;
   memset(opt, false, sizeof opt);
 
-  for(int rep = 1; rep <= N; ++rep){
-    cin >> num[rep];
-    num[rep] %= M;
-  }
+  for(int rep = 1; rep <= N; ++rep) cin >> num[rep];
 
   opt[0][0] = true;
 
@@ -45,10 +42,7 @@ int main(){
     for(int p = 0, nxt; p < M; ++p){
       if(!opt[!cur][p]) continue;
       opt[cur][p] = true;
-      nxt = p + num[idx];
-
-      assert(nxt <= 2 * M - 2);
-      if(nxt >= M) nxt -= M;
+      nxt = (p + num[idx]) % M;
 
       if(nxt == 0){
         cout << "YES\n";
