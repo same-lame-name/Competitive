@@ -26,25 +26,26 @@ const double EPS = (1e-9);
 int testcases, N, num[(int)2e5 + 5];
 
 void solve(){
-  int left = 1, right = N;
-  while(left <= N && num[left] == left) left++;
-
-  if(left > N){
+  bool derangement = true;
+  int left = 0, right = N - 1;
+  while(left < N && num[left] == left + 1) left++;
+  if(left == N){
     // Already sorted case.
     cout << "0\n";
     return;
   }
 
-  while(num[right] == right) right--;
+  while(num[right] == right + 1) right--;
 
-  for(int idx = left; idx <= right; ++idx){
-    if(num[idx] == idx){
-      cout << "2\n";
-      return;
-    }
-  }
+  // There has to be atleast two elements in range [left, right].
+  assert(left < right);
+
+  for(int idx = left; idx <= right; ++idx) if(num[idx] == idx + 1) derangement = false;
   
-  cout << "1\n"; 
+  // variable 'derangement' tells us if the range from [left, right] is a derangement.
+  if(derangement) cout << "1\n";
+  else cout << "2\n";
+  
   return;
 }
 
@@ -54,7 +55,7 @@ int main(){
   cin >> testcases;
   while(testcases--){
     cin >> N;
-    for(int idx = 1; idx <= N; ++idx) cin >> num[idx];
+    for(int idx = 0; idx < N; ++idx) cin >> num[idx];
     solve();
   }
 
