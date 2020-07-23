@@ -23,26 +23,23 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int testcases, N;
-bool even, ones;
+int testcases, N, moves[(int)1e5 + 5];
+bool odd;
 
 int main(){
   FAST_IO
   cin >> testcases;
   while(testcases--){
     cin >> N;
-    //even stores the parity of number of 1's in prefix in [0, N - 2].
-    even = true, ones = true;
+    odd = true;
+    for(int m = 0; m < N; ++m) cin >> moves[m];
 
-    for(int idx = 0, x; idx < N; ++idx){
-      cin >> x;
-      if(idx == N - 1) continue;
-
-      if(x == 1 && ones) even = !even;
-      else ones = false;
+    for(int m = N - 2; m >= 0; --m){
+      if(moves[m] > 1) odd = true;
+      else odd = !odd;
     }
 
-    if(even) cout << "First\n";
+    if(odd) cout << "First\n";
     else cout << "Second\n";
   }
   return 0;
