@@ -1,4 +1,21 @@
 {
+  "CF87827615": {
+    "contest_id": 1382,
+    "language": "GNU C++17",
+    "path": "codeforces\\1382\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Sequential Nim",
+    "problem_url": "https://codeforces.com/contest/1382/problem/B",
+    "submission_id": "CF87827615",
+    "submission_url": "https://codeforces.com/contest/1382/submission/87827615",
+    "tags": [
+      "dp",
+      "games",
+      "*1100"
+    ],
+    "timestamp": "Jul/24/2020 10:44"
+  },
   "CF87837755": {
     "contest_id": 436,
     "language": "GNU C++17",
