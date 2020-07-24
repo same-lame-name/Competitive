@@ -1,4 +1,21 @@
 {
+  "CF87844558": {
+    "contest_id": 91,
+    "language": "GNU C++17",
+    "path": "codeforces\\91\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Queue",
+    "problem_url": "https://codeforces.com/contest/91/problem/B",
+    "submission_id": "CF87844558",
+    "submission_url": "https://codeforces.com/contest/91/submission/87844558",
+    "tags": [
+      "binary search",
+      "data structures",
+      "*1500"
+    ],
+    "timestamp": "Jul/24/2020 14:23"
+  },
   "CF87846064": {
     "contest_id": 91,
     "language": "GNU C++17",

@@ -23,27 +23,40 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int N, diss[(int)1e5 + 5];
-pair<int, int> info[(int)1e5 + 5];
+int N, age[(int)1e5 + 5], diss[(int)1e5 + 5];
+vector<int> indices;
+
+int get(int idx){
+  // ok points to the first index that is smaller than current value.
+  int left = 0, right = SZ(indices) - 1, ok = SZ(indices);
+  while(left <= right){
+    int mid = left + (right - left) / 2;
+    if(age[indices[mid]] < age[idx]){
+      ok = mid;
+      right = mid - 1;
+    }else left = mid + 1;
+  }
+
+  assert(ok < SZ(indices));
+  return indices[ok] - idx - 1;
+}
+
 
 int main(){
   FAST_IO
   cin >> N;
+  for(int idx = 0; idx < N; ++idx) cin >> age[idx];
   memset(diss, -1, sizeof diss);
 
-  for(int idx = 0, age; idx < N; ++idx){
-    cin >> age;
-    info[idx] = MP(age, idx);
-  }
+  for(int idx = N - 1; idx >= 0; --idx){
+    if(indices.empty() || age[indices.back()] >= age[idx]){
+      indices.PB(idx);
+      continue;
+    }
 
-  sort(info, info + N);
-  
-  for(int idx = 0, farthest = -1, cur; idx < N; ++idx){
-    cur = info[idx].S;
-    if(farthest > cur) diss[cur] = farthest - cur - 1;
-    else farthest = cur;
+    diss[idx] = get(idx);
   }
-
+    
   for(int idx = 0; idx < N; ++idx) cout << diss[idx] << " ";
   return 0;
 }
