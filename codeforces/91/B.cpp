@@ -29,6 +29,7 @@ pair<int, int> info[(int)1e5 + 5];
 int main(){
   FAST_IO
   cin >> N;
+  memset(diss, -1, sizeof diss);
 
   for(int idx = 0, age; idx < N; ++idx){
     cin >> age;
@@ -39,8 +40,8 @@ int main(){
   
   for(int idx = 0, farthest = -1, cur; idx < N; ++idx){
     cur = info[idx].S;
-    max_self(farthest, cur);
-    diss[cur] = farthest - cur - 1;
+    if(farthest > cur) diss[cur] = farthest - cur - 1;
+    else farthest = cur;
   }
 
   for(int idx = 0; idx < N; ++idx) cout << diss[idx] << " ";
