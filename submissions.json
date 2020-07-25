@@ -1,4 +1,21 @@
 {
+  "CF87979919": {
+    "contest_id": 873,
+    "language": "GNU C++17",
+    "path": "codeforces\\873\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Balanced Substring",
+    "problem_url": "https://codeforces.com/contest/873/problem/B",
+    "submission_id": "CF87979919",
+    "submission_url": "https://codeforces.com/contest/873/submission/87979919",
+    "tags": [
+      "dp",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jul/25/2020 16:21"
+  },
   "CF88050238": {
     "contest_id": 441,
     "language": "GNU C++17",
