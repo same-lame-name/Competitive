@@ -1,4 +1,20 @@
 {
+  "CF87964633": {
+    "contest_id": 121,
+    "language": "GNU C++17",
+    "path": "codeforces\\121\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Lucky Transformation",
+    "problem_url": "https://codeforces.com/contest/121/problem/B",
+    "submission_id": "CF87964633",
+    "submission_url": "https://codeforces.com/contest/121/submission/87964633",
+    "tags": [
+      "strings",
+      "*1500"
+    ],
+    "timestamp": "Jul/25/2020 12:18"
+  },
   "CF87974169": {
     "contest_id": 1382,
     "language": "GNU C++17",
