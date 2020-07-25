@@ -34,19 +34,23 @@ void solve(){
   act.clear();
 
   for(int idx = N - 1; idx >= 0; --idx){
-    swap(head, tail);
-    rev = !rev;
     a = A[tail] - '0', b = B[idx] - '0';
     if(rev) a = !a;
 
-    if(a != b) act.PB(1);
-    act.PB(idx + 1);
+    if(a != b){
+      a = A[head] - '0';
+      if(rev) a = !a;
+      if(a == b) act.PB(1);
+    
+      act.PB(idx + 1);
+      swap(head, tail);
+      rev = !rev;
+    }
 
     if(rev) tail++;
     else tail--;
   }
 
-  assert(SZ(act) <= 2 * N);
   cout << SZ(act) << " ";
   for(int ele : act) cout << ele << " ";
   cout << '\n';
