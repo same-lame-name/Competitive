@@ -1,4 +1,21 @@
 {
+  "CF88192532": {
+    "contest_id": 580,
+    "language": "GNU C++17",
+    "path": "codeforces\\580\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Kefa and Dishes",
+    "problem_url": "https://codeforces.com/contest/580/problem/D",
+    "submission_id": "CF88192532",
+    "submission_url": "https://codeforces.com/contest/580/submission/88192532",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "*1800"
+    ],
+    "timestamp": "Jul/28/2020 15:33"
+  },
   "CF88192815": {
     "contest_id": 580,
     "language": "GNU C++17",

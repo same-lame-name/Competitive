@@ -44,21 +44,20 @@ int main(){
   }
 
   for(int idx = 0; idx < N; ++idx) opt[1 << idx][idx] = ben[idx];
-  for(int mask = 0; mask < (1 << N); ++mask){
+  for(int mask = 0, cnt; mask < (1 << N); ++mask){
+    cnt = get(mask);
+    if(cnt > M) continue;
     for(int last = 0; last < N; ++last){
+      if(cnt == M){
+        max_self(bst, opt[mask][last]);
+        continue;
+      }
       if(mask & (1 << last)){
         for(int nxt = 0; nxt < N; ++nxt){
           if(mask & (1 << nxt)) continue;
           max_self(opt[mask | (1 << nxt)][nxt], opt[mask][last] + ben[nxt] + ext[nxt][last]);
         }
       }
-    }
-  }
-
-  for(int mask = 0; mask < (1 << N); ++mask){
-    if(get(mask) != M) continue;
-    for(int last = 0; last < N; ++last){
-      if(mask & (1 << last)) max_self(bst, opt[mask][last]);
     }
   }
   
