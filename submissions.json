@@ -1,4 +1,22 @@
 {
+  "CF88202711": {
+    "contest_id": 1084,
+    "language": "GNU C++17",
+    "path": "codeforces\\1084\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "The Fair Nut and String",
+    "problem_url": "https://codeforces.com/contest/1084/problem/C",
+    "submission_id": "CF88202711",
+    "submission_url": "https://codeforces.com/contest/1084/submission/88202711",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jul/28/2020 17:52"
+  },
   "CF88233604": {
     "contest_id": 494,
     "language": "GNU C++17",
