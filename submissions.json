@@ -1,4 +1,22 @@
 {
+  "CF88196234": {
+    "contest_id": 534,
+    "language": "GNU C++17",
+    "path": "codeforces\\534\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Exam",
+    "problem_url": "https://codeforces.com/contest/534/problem/A",
+    "submission_id": "CF88196234",
+    "submission_url": "https://codeforces.com/contest/534/submission/88196234",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Jul/28/2020 16:23"
+  },
   "CF88202711": {
     "contest_id": 1084,
     "language": "GNU C++17",
