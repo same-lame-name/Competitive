@@ -24,40 +24,39 @@ const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
 int N, M, k; 
-LL ben[20], ext[20][20], opt[(1 << 18)][20], bst = 0;
+LL ben[20], ext[20][20], memo[(1 << 19)][20];
 
-int get(int mask){
+LL util(int mask, int last){
   int cnt = 0;
-  for(int idx = 0; idx < N; ++idx){
+  for(int idx = 1; idx <= N; ++idx){
     if(mask & (1 << idx)) cnt++;
   }
 
-  return cnt;
+  if(cnt == M) return 0LL;
+
+  LL &opt = memo[mask][last];
+  if(opt != -1) return opt;
+  opt = 0;
+
+  for(int choice = 1; choice <= N; ++choice){
+    if(mask & (1 << choice)) continue;
+  
+    max_self(opt, util(mask | (1 << choice), choice) + ben[choice] + ext[choice][last]);
+  }
+
+  return opt;
 }
 
 int main(){
   FAST_IO
   cin >> N >> M >> k;
-  for(int idx = 0; idx < N; ++idx) cin >> ben[idx];
+  memset(memo, -1, sizeof memo);
+  for(int idx = 1; idx <= N; ++idx) cin >> ben[idx];
   for(int rep = 0, x, y; rep < k; ++rep){
-    cin >> x >> y >> ext[y - 1][x - 1];
+    cin >> x >> y >> ext[y][x];
   }
 
-  for(int idx = 0; idx < N; ++idx) opt[1 << idx][idx] = ben[idx];
-  for(int mask = 0, cnt; mask < (1 << N); ++mask){
-    cnt = get(mask);
-    for(int last = 0; last < N; ++last){
-      if(cnt == M) max_self(bst, opt[mask][last]);
-      if(mask & (1 << last)){
-        for(int nxt = 0; nxt < N; ++nxt){
-          if(mask & (1 << nxt)) continue;
-          max_self(opt[mask | (1 << nxt)][nxt], opt[mask][last] + ben[nxt] + ext[nxt][last]);
-        }
-      }
-    }
-  }
-  
-  cout << bst << '\n';
+  cout << util(0, 0);
   return 0;
 }
 
