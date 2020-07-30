@@ -24,18 +24,15 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-// My submissions with array are getting TLE.
-// This is strange! I suspect memset is costly.
-int testcases, N, k, z, base = -1; 
-int rew[(int)1e5 + 5], memo[(int)1e5 + 5][10][2], visited[(int)1e5 + 5][10][2];
+int testcases, N, k, z, rew[(int)1e5 + 5];// memo[(int)1e5 + 5][10][2];
+vector<vector<vector<int>>> memo;
 
 int util(int idx, int used, bool can){
   int rem = k - (idx + 2 * used);
   if(rem == 0) return 0;
 
   int &cur = memo[idx][used][can];
-  if(visited[idx][used][can] == base) return cur;
-  visited[idx][used][can] = base;
+  if(cur != -1) return cur;
 
   assert(idx + 1 < N);
   cur = util(idx + 1, used, true) + rew[idx + 1];
@@ -51,9 +48,10 @@ int main(){
 
   while(testcases--){
     cin >> N >> k >> z;
+    memo = vector<vector<vector<int>>>(N + 1, vector<vector<int>>(10, vector<int>(2, -1)));
+//    memset(memo, -1, sizeof memo);
     for(int rep = 0; rep < N; ++rep) cin >> rew[rep];
     cout << rew[0] + util(0, 0, false) << '\n';
-    base--;
   }
   return 0;
 }
