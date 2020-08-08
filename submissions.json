@@ -1,4 +1,21 @@
 {
+  "CF89335320": {
+    "contest_id": 293,
+    "language": "GNU C++17",
+    "path": "codeforces\\293\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Weird Game",
+    "problem_url": "https://codeforces.com/contest/293/problem/A",
+    "submission_id": "CF89335320",
+    "submission_url": "https://codeforces.com/contest/293/submission/89335320",
+    "tags": [
+      "games",
+      "greedy",
+      "*1500"
+    ],
+    "timestamp": "Aug/08/2020 18:19"
+  },
   "CF89385948": {
     "contest_id": 1245,
     "language": "GNU C++17",
