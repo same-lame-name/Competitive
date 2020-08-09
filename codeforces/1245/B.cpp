@@ -23,54 +23,64 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int testcases, N, a, b, c;
-string in, moves;
+int testcases, N, a, b, c, memo[105][105][105];
+char moves[105][105][105];
+string in;
 
+int res(char x, char y){
+  if(x == 'R') return y == 'S';
+  if(x == 'P') return y == 'R';
+  if(x == 'S') return y == 'P';
+
+  assert(false);
+  return 0;
+}
+
+int dputil(int done, int r, int p){
+  if(done == N) return 0;
+  int &cnt = memo[done][r][p];
+  if(cnt != -1) return cnt;
+
+  int s = N - done - r - p;
+  assert(s >= 0);
+  char move = in[done];
+  if(s > 0 && max_self(cnt, res('S', move) + dputil(done + 1, r, p))){
+    moves[done][r][p] = 'S';
+  }
+  if(r > 0 && max_self(cnt, res('R', move) + dputil(done + 1, r - 1, p))){
+    moves[done][r][p] = 'R';
+  }
+  if(p > 0 && max_self(cnt, res('P', move) + dputil(done + 1, r, p - 1))){
+    moves[done][r][p] = 'P';
+  }
+
+  return cnt;
+}
+
+void recover(){
+  int done = 0, r = a, p = b;
+  char util;
+  while(done < N){
+    util = moves[done][r][p]; 
+    cout << util;
+    if(util == 'R') r--;
+    else if(util == 'P') p--;
+
+    done++;
+  }
+
+  cout << '\n';
+  return;
+}
 
 void solve(){
-  int score, r = 0, p = 0, s = 0;
-  for(char x : in){
-    if(x == 'R') r++;
-    else if(x == 'P') p++;
-    else s++;
-  }
+  memset(memo, -1, sizeof memo);
 
-  score = min(r, b) + min(p, c) + min(s, a);
-  if(2 * score < N) cout << "No\n";
+  if(dputil(0, a, b) * 2 < N) cout << "No\n";
   else{
     cout << "Yes\n";
-    moves = string(N, '#');
-    for(int idx = 0; idx < N; ++idx){
-      if(in[idx] == 'R' && b){
-        moves[idx] = 'P';
-        b--;
-      }else if(in[idx] == 'P' && c){
-        moves[idx] = 'S';
-        c--;
-      }else if(in[idx] == 'S' && a){
-        moves[idx] = 'R';
-        a--;
-      }
-    }
-
-    for(char x : moves){
-      if(x == '#'){
-        if(a){
-          cout << 'R';
-          a--;
-        }else if(b){
-          cout << 'P';
-          b--;
-        }else{
-          assert(c > 0);
-          cout << 'S';
-          c--;
-        }
-      }else cout << x;
-    }
-    cout << '\n';
+    recover();
   }
-    
   return;
 }
 
