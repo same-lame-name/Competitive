@@ -26,28 +26,25 @@ const double EPS = (1e-9);
 int testcases, N;
 LL k;
 string in;
-queue<int> zeros;
+unordered_set<int> zeros;
 
 void solve(){
-  assert(zeros.empty());
+  zeros.clear();
 
   for(int idx = 0, front = 0; idx < N; ++idx){
     if(in[idx] == '1') continue;
     if(idx - front <= k){
-      zeros.push(front);
+      zeros.insert(front);
       k -= (idx - front);
       front++;
     }else{
-      zeros.push(idx - k);
+      zeros.insert(idx - k);
       k -= k;
     }
   }
   
   for(int idx = 0; idx < N; ++idx){
-    if(!zeros.empty() && idx == zeros.front()){
-      zeros.pop();
-      cout << 0;
-    }
+    if(zeros.count(idx)) cout << 0;
     else cout << 1;
   }
 
@@ -55,6 +52,9 @@ void solve(){
 
   return;
 }
+    
+    
+  
  
 int main(){
   FAST_IO
