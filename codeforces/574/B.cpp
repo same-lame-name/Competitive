@@ -24,17 +24,16 @@ const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
 int N, M, degree[4005], opt = INF;
-bool know[4005][4005];
+set<int> know[4005];
 vector<pair<int, int>> edges;
 
 int main(){
   FAST_IO
-  memset(know, false, sizeof know);
   cin >> N >> M;
   for(int rep = 0, x, y; rep < M; ++rep){
     cin >> x >> y;
-    know[y][x] = true;
-    know[x][y] = true;
+    know[x].insert(y);
+    know[y].insert(x);
     degree[x]++;
     degree[y]++;
     edges.PB(MP(x, y));
@@ -43,7 +42,7 @@ int main(){
   for(pair<int, int> edge : edges){
     int x = edge.F, y = edge.S;
     for(int third = 1; third <= N; ++third){
-      if(know[x][third] && know[y][third]){
+      if(know[x].count(third) && know[y].count(third)){
         assert(degree[x] >= 2 && degree[y] >= 2 && degree[third] >= 2);
         min_self(opt, degree[x] + degree[y] + degree[third]);
       }
