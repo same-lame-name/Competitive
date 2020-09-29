@@ -27,8 +27,8 @@ int testcases, N;
 
 void solve(){
   int bef = sqrt(N), aft = sqrt(N) + 1;
-  int first = (N - 1) / bef + bef - 1;
-  int second = (N - 1) / aft + aft - 1;
+  int first = (N - bef) / bef + ((N - bef) % bef > 0) + bef - 1;
+  int second = (N - aft) / aft + ((N - aft) % aft > 0) + aft - 1;
   cout << min(first, second) << '\n';
   return;
 }
