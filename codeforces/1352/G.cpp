@@ -23,7 +23,7 @@ const int INF = 1e9 + 7;
 const double PI = acos(-1.0);
 const double EPS = (1e-9);
 
-int testcases, N;
+int testcases, N, odd;
 
 int main(){
   FAST_IO
@@ -34,7 +34,8 @@ int main(){
       cout << "-1\n";
       continue;
     }
-    for(int x = N - !(N & 1); x > 0; x -= 2) cout << x << " ";
+    odd = N - !(N & 1); 
+    for(int x = odd; x > 0; x -= 2) cout << x << " ";
     cout << "4 2 ";
     for(int x = 6; x <= N; x += 2) cout << x << " ";
     cout << '\n';
