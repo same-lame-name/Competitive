@@ -38,14 +38,19 @@ int main(){
 	while(testcases--){
 		cin >> w >> h >> n;
 		count = 0;
-
-		for(int util : {w, h}){
-			while(util % 2 == 0){
-				util /= 2;
-				count++;
-			}
-			assert(util & 1);
+		while(w % 2 == 0){
+			w /= 2;
+			count++;
 		}
+
+		while(h % 2 == 0){
+			h /= 2;
+			count++;
+		}
+
+		assert(w & 1);
+		assert(h & 1);
+		assert(count < 32);
 
 		if(n <= (1 << count)) cout << "YES\n";
 		else cout << "NO\n";
