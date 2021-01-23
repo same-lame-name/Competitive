@@ -2851,6 +2851,23 @@
     ],
     "timestamp": "Jan/23/2021 15:35"
   },
+  "CF105145400": {
+    "contest_id": 479,
+    "language": "Java 8",
+    "path": "codeforces\\479\\C.java",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Exams",
+    "problem_url": "https://codeforces.com/contest/479/problem/C",
+    "submission_id": "CF105145400",
+    "submission_url": "https://codeforces.com/contest/479/submission/105145400",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Jan/23/2021 16:52"
+  },
   "CF105146983": {
     "contest_id": 479,
     "language": "Java 8",

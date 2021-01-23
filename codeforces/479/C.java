@@ -17,41 +17,26 @@ public class Main {
         Integer N = scanner.nextInt();
         Integer current = 0;
 
-        ArrayList<IntegerPair> choices = new ArrayList<IntegerPair>();
-
+        ArrayList<Pair<Integer, Integer>> choices = new ArrayList<Pair<Integer, Integer>>();
         for(int rep = 0; rep < N; ++rep){
-            Integer fst = scanner.nextInt();
-            Integer sec = scanner.nextInt();
-
-            choices.add(new IntegerPair(fst, sec));
+            Pair<Integer, Integer> choice = new Pair<Integer, Integer>(scanner.nextInt(), scanner.nextInt());
+            choices.add(choice);
         }
 
-        Collections.sort(choices);
-        for(IntegerPair choice : choices){
-            if(choice.getSecond() >= current) current = choice.getSecond();
-            else current = choice.getFirst();
+        Collections.sort(choices, new choiceComparator());
+
+        for(Pair<Integer, Integer> choice : choices){
+            if(choice.getValue() >= current) current = choice.getValue();
+            else current = choice.getKey();
         }
 
         System.out.println(current);
-        return;
     }
 
-    static class IntegerPair implements Comparable<IntegerPair>{
-        Integer first;
-        Integer second;
-
-        public IntegerPair(Integer fst, Integer sec){
-            this.first = fst;
-            this.second = sec;
-        }
-
-        public Integer getFirst(){ return this.first; }
-
-        public Integer getSecond(){ return this.second; }
-
-        public int compareTo(IntegerPair other){
-            if(!this.first.equals(other.first)) return this.first.compareTo(other.first);
-            return this.second.compareTo(other.second);
+    static class choiceComparator implements Comparator<Pair<Integer, Integer>>{
+        public int compare(Pair<Integer, Integer> fst, Pair<Integer, Integer> sec){
+            if(fst.getKey().compareTo(sec.getKey()) != 0) return fst.getKey().compareTo(sec.getKey());
+            return fst.getValue().compareTo(sec.getValue());
         }
     }
 
