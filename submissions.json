@@ -2885,6 +2885,22 @@
     ],
     "timestamp": "Jan/23/2021 17:13"
   },
+  "CF105203298": {
+    "contest_id": 835,
+    "language": "GNU C++17",
+    "path": "codeforces\\835\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "The number on the board",
+    "problem_url": "https://codeforces.com/contest/835/problem/B",
+    "submission_id": "CF105203298",
+    "submission_url": "https://codeforces.com/contest/835/submission/105203298",
+    "tags": [
+      "greedy",
+      "*1100"
+    ],
+    "timestamp": "Jan/24/2021 12:58"
+  },
   "CF105204801": {
     "contest_id": 835,
     "language": "Java 8",
