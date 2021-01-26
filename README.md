@@ -13,7 +13,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-373 | [C - Ball in Berland](https://codeforces.com/contest/1475/problem/C) | [GNU C++17](./codeforces/1475/C.cpp) | `combinatorics` `dfs and similar` `graphs` `hashing` `math` | Jan/26/2021 13:48 | 
+374 | [C - Ball in Berland](https://codeforces.com/contest/1475/problem/C) | [GNU C++17](./codeforces/1475/C.cpp) | `combinatorics` `dfs and similar` `graphs` `hashing` `math` | Jan/26/2021 13:48 | 
+373 | [B - New Year's Number](https://codeforces.com/contest/1475/problem/B) | [GNU C++17](./codeforces/1475/B.cpp) | `brute force` `dp` `math` | Jan/26/2021 11:27 | 
 372 | [B - The number on the board](https://codeforces.com/contest/835/problem/B) | [Java 8](./codeforces/835/B.java) | `greedy` `*1100` | Jan/24/2021 13:20 | 
 371 | [C - Exams](https://codeforces.com/contest/479/problem/C) | [Java 8](./codeforces/479/C.java) | `greedy` `sortings` `*1400` | Jan/23/2021 17:13 | 
 370 | [A - Chat room](https://codeforces.com/contest/58/problem/A) | [GNU C++17](./codeforces/58/A.cpp) | `greedy` `strings` `*1000` | Jan/23/2021 15:11 | 
