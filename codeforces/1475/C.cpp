@@ -13,10 +13,9 @@ int main(){
 	FAST_IO
 	int testcases, a, b, k;
 	long long total;
-	map<int, int> boyFreq, girlFreq;
 	cin >> testcases;
 	while(testcases--){
-		boyFreq.clear(), girlFreq.clear();
+		map<int, int> boyFreq, girlFreq;
 		total = 0;
 		cin >> a >> b >> k;
 
