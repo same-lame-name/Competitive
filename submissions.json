@@ -3017,6 +3017,24 @@
     ],
     "timestamp": "Jan/26/2021 13:48"
   },
+  "CF105660637": {
+    "contest_id": 1475,
+    "language": "GNU C++17",
+    "path": "codeforces\\1475\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Ball in Berland",
+    "problem_url": "https://codeforces.com/contest/1475/problem/C",
+    "submission_id": "CF105660637",
+    "submission_url": "https://codeforces.com/contest/1475/submission/105660637",
+    "tags": [
+      "combinatorics",
+      "graphs",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Jan/28/2021 16:54"
+  },
   "CF105662049": {
     "contest_id": 1251,
     "language": "GNU C++17",

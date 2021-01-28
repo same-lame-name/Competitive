@@ -11,12 +11,12 @@ long long choose(int k){
 
 int main(){
 	FAST_IO
-	int testcases, a, b, k, boyFreq[N], girlFreq[N];
+	int testcases, a, b, k;
 	long long total;
+	map<int, int> boyFreq, girlFreq;
 	cin >> testcases;
 	while(testcases--){
-		memset(boyFreq, 0, sizeof boyFreq);
-		memset(girlFreq, 0, sizeof girlFreq);
+		boyFreq.clear(), girlFreq.clear();
 		total = 0;
 		cin >> a >> b >> k;
 
@@ -31,8 +31,8 @@ int main(){
 		}
 
 		total += choose(k);
-		for(int boy = 1; boy <= a; ++boy) total -= choose(boyFreq[boy]);
-		for(int girl = 1; girl <= b; ++girl) total -= choose(girlFreq[girl]);
+		for(auto &ele : boyFreq) total -= choose(ele.second);
+		for(auto &ele : girlFreq) total -= choose(ele.second);
 
 		cout << total << '\n';
 	}
